@@ -1,6 +1,6 @@
 # SeriousGames
 Renpy Project build for Serious Games VIP
-To install and work using Renpy
+  To install and work using Renpy
 
   1) Download the latest version of Renpy here: https://www.renpy.org/latest.html
   2) In the renpydev folder where you installed Renpy, clone this repo into a single folder (like /renpydev/SeriousGames/)
