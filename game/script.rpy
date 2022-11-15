@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define e = Character("Jack", color=(66, 221, 241, 255))
 define m = Character("Buzz", color=(221, 15, 176, 255))
 
 
@@ -15,23 +15,26 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene uhm
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen
+    show sprite0001
 
     # These display lines of dialogue.
 
-    e "Welcome! As you probably know, I am Buzz. Do you want me to explain the game?"
+    e "Welcome! I am Jack. Jack Ehts, and this is the Serious Games project."
 
-    hide eileen
+    """
+    what is going on?
+    """
 
-    show buzz
+    e "Well- this game will be about helping people with diabetes? When you're up for it, press start okay??"
+    ## show buzz
 
-    m "Once you add a story, pictures, and music, you can release it to the world!"
+    ## e ""
 
     # This ends the game.
 
