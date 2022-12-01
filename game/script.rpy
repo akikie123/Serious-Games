@@ -39,33 +39,182 @@ label start:
     
     #somehow change slides here
    # e "Well- this game will be about helping people with diabetes? When you're up for it, press start okay??"
-
+    """
+    As you walk, Buzz seems to be shaking a little bit as he talks, but you’re not sure if it’s just because it’s cold outside or because of something else.
+    """
     menu:
 
-        "This is Choice A!":
-            jump choice1_yes
+        "Ignore it. He’s probably just tired.":
+            jump outside_class
 
-        "This is Choice B!":
-            jump choice1_no
+        "Ask if he’s alright.":
+            jump conversation_to_class
 
-    label choice1_yes:
+    label conversation_to_class:
 
-        $ menu_flag = True
+      #  $ menu_flag = True
+        """
+        You start walking to class, chatting aimlessly about the next impossible project that the professors have decided was an amazing idea.
+        """
 
-        e "Choice A Reached"
+        y "I’m telling you, there’s no way we’ll be able to finish it "
 
-        jump choice1_done
+        """
+        He stops, staring at the horizon and trying to intake air, looking a little queasy.
+        """
 
-    label choice1_no:
+        #jump choice1_done
 
-        $ menu_flag = False
+        menu:
 
-        e "Choice B Reached"
+            "Wait Quietly.":
+                jump buzz_says_nothing
 
+            "Ask “Are you alright?”":
+                jump buzz_says_something
+
+        label buzz_says_nothing:
+
+        #  $ menu_flag = True
+            """
+            The two of you quickly walk to class.
+            """
+            jump outside_class
+
+        label buzz_says_something:
+
+        #   $ menu_flag = False
+
+            m "Oh yeah, I’m all good. Thanks for asking. Just tired after the workout and weirdly anxious about the project"
+
+            jump outside_class
+
+        jump outside_class
+
+    label outside_class:
+
+     #   $ menu_flag = False
+
+        m "Finally, we make it to class. 5 minutes before we’re due to start! Nice! Head hurts now, but that’s fine. Price we pay for speedwalking."
+
+        y "{i}This is starting to be a lot of symptoms that aren’t just from a long workout or a bad night of sleep. What should I do?{/i}" 
+        
+        menu:
+
+            "Usher the both of you into class. He’s probably fine.":
+                jump in_class
+
+            "Ask “Are you sure you’re okay?”":
+                jump buzz_sits_down
+
+            "Ask “Should you check your blood sugar?”":
+                jump buzz_check_blood
+
+        label buzz_check_blood:
+
+        #  $ menu_flag = True
+            m "I don’t actually know. I’m really not feeling great, so I could just be sick. But everything came pretty suddenly. I’ll check it once we’re in class, I can’t reach my pocket right now."
+            """
+            The two of you head inside and settle down in class.
+            """
+            jump in_class
+
+        label buzz_sits_down:
+
+        #   $ menu_flag = False
+
+            m "Let’s just sit down in class first and I’ll solve it in there."
+
+            jump in_class
+
+        label in_class:
+
+        #   $ menu_flag = False
+            """
+            Both of you pull out your laptops and prepare to start taking notes
+
+            """
+
+            m "I think I’m going to put my head down for a bit. It’s not doing to great with both the headache and the amount of trauma this room has given me from 2200 Tests."
+
+            menu:
+
+                "Let him rest":
+                    jump class_continues
+
+                "Ask if he can check his blood sugar.":
+                    jump check_blood_sugar
+
+            label check_blood_sugar:
+
+            #  $ menu_flag = True
+                """
+                Buzz pulls out his CGM (Continuous Glucose Monitor) and notices that it’s way too low! It’s under 70 mg/dl!
+                """
+                m "Well that’s not great. Could you run and grab me a snack?"
+
+                y "You got it!"
+
+                """
+                You run to the vending machine
+                """
+
+                menu:
+
+                    "Choose a pack of hard candy":
+                        jump hard_candy
+
+                    "Choose a pack of peanuts":
+                        jump peanuts
+
+                label hard_candy:
+
+                #  $ menu_flag = True
+                    """
+                    Buzz pulls out his CGM (Continuous Glucose Monitor) and notices that it’s way too low! It’s under 70 mg/dl!
+                    """
+                    m "Well that’s not great. Could you run and grab me a snack?"
+
+                    y "You got it!"
+
+                    """
+                    You run to the vending machine
+                    """
+
+                    jump outside_class
+                
+                label peanuts:
+
+                    jump
+
+                jump outside_class
+                
+
+            label class_continues:
+
+            #   $ menu_flag = False
+
+                m "Oh yeah, I’m all good. Thanks for asking. Just tired after the workout and weirdly anxious about the project"
+
+                jump outside_class
+
+            jump choice3_done
+
+        label choice3_done:
+        
+        
         jump choice1_done
 
     label choice1_done:
 
+
+    label vending_machine_ending_screen:
+
+    label middle_ending_screen:
+    
+    label bad_ending_screen:
+
+    label someone_else_called_911:
         # ... the game continues here.
 
  
