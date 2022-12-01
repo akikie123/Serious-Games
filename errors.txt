@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 52: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
+    "He's probably just tired. He did say he hardly slept."
+    ^
+
+File "game/script.rpy", line 60: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
+    player "You sure you wanna go? You're shaking a bit."
+    ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Thu Dec  1 17:51:16 2022
