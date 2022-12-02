@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 88, in script
-    b "Oh yeah, I’m all good. Thanks for asking. Just tired after the workout and weirdly anxious about the project"
-Exception: Sayer 'b' is not defined.
+  File "game/script.rpy", line 232, in script
+    jump vending_machine_pt2
+ScriptError: could not find label 'vending_machine_pt2'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 88, in script
-    b "Oh yeah, I’m all good. Thanks for asking. Just tired after the workout and weirdly anxious about the project"
-  File "C:\Users\jliao\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\jliao\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'b' is not defined.
+  File "game/script.rpy", line 232, in script
+    jump vending_machine_pt2
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'vending_machine_pt2'.
 
-Windows-10-10.0.19044 AMD64
+Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 Serious Games 1.0
-Wed Nov 30 17:55:02 2022
+Fri Dec  2 14:22:02 2022

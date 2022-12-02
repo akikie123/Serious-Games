@@ -210,11 +210,11 @@ label start:
                     You decide to poke him a little bit, and find that he’s not responding at all! Not even a slap to let him sleep more!
                     """
 
-                    y "Buzz? Buzz! Are you there, we need to learn about network hopping!"
+                    player "Buzz? Buzz! Are you there, we need to learn about network hopping!"
 
                     m ". . . hrggg? Sup? Is something wrong? Something is probably wrong, but something is always wrong."
 
-                    y "Uh oh, this doesn’t look to good."
+                    player "Uh oh, this doesn’t look to good."
 
                     menu:
                         "Check his CGM for his blood sugar level":
@@ -232,28 +232,28 @@ label start:
                                 jump vending_machine_pt2
 
                             "Panic silently":
-                                jump to found_unconcious_way_later
+                                jump found_unconcious_way_later
 
-                        label vending_maching_pt2:
+                        label vending_machine_pt2:
                             """
                             You run to the vending machine.
                             """
 
                             menu:
                                 "Choose sweet fruit juice":
-                                    jump to sweet_fruit_juice
+                                    jump sweet_fruit_juice
 
                                 "Choose beef jerky":
-                                    jump to beef_jerky
+                                    jump beef_jerky
 
                             label sweet_fruit_juice:
                                 """
                                 You come back to class holding a Minute Maid, and shake Buzz a little more to wake him up.
                                 """
 
-                                y "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple for now to get the blood sugar up?"
+                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple for now to get the blood sugar up?"
 
-                                m "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Hopefully after class I can go eat a meal."
+                                m "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
                                 
                                 jump middle_ending_screen
 
@@ -262,9 +262,9 @@ label start:
                                 You come back to class holding a bag of beef jerky.
                                 """
 
-                                y "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple for now to get the blood sugar up?"
+                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple for now to get the blood sugar up?"
 
-                                m "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Hopefully after class I can go eat a meal."
+                                m "Hmm? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
                                 
                                 m "Wait a second, these are nuts I don’t know how much this will help me."
 
@@ -275,11 +275,11 @@ label start:
                     It’s now the end of class! And you two need to leave soon! So you poke Buzz to see if he wakes up.
                     """
 
-                    y "Buzz, we have to go! Wake up!"
+                    player "Buzz, we have to go! Wake up!"
 
                     m ". . ."
 
-                    y "Buzz? Buzz! Hello?!"
+                    player "Buzz? Buzz! Hello?!"
 
                     m ". . ."
 
@@ -289,10 +289,10 @@ label start:
 
                     menu:
                         "Call 911":
-                            jump to er_ending_screen
+                            jump er_ending_screen
 
                         "Try to shake him awake":
-                            jump to someone_else_calls_911
+                            jump someone_else_calls_911
 
                     return
 
@@ -314,6 +314,12 @@ label start:
 
 
     label middle_ending_screen:
+        """
+        Though a little late to notice, you got Buzz just what he needed. 
+        He felt well enough within the hour and decided to go back to his dorm to rest. 
+        """
+        "nice save."
+        return
     
     label bad_ending_screen:
         "Buzz quietly ate some peanuts before looking dazed"
