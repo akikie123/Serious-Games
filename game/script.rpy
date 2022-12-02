@@ -5,7 +5,7 @@
 
 define e = Character("Jack", color=(66, 221, 241, 255))
 define m = Character("Buzz", color=(221, 15, 176, 255))
-define y = Character("You", color=(222, 34, 213, 255))
+define player = Character("You", color=(222, 34, 213, 255))
 
 
 # The game starts here.
@@ -22,7 +22,6 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show sprite0001
 
     # These display lines of dialogue.
 
@@ -30,12 +29,12 @@ label start:
       You and Buzz are meeting up one day before class! Buzz is a known diabetic, and but recently his mind has been occupied by school and responsibilities.
     """
     
-    y "Hey Buzz! How’s it going? Are you ready for CS 2200 to steamroll us again?"
+    player "Hey Buzz! How’s it going? Are you ready for CS 2200 to steamroll us again?"
     
-    m "Hey! I’m going as well as I can, didn’t get much sleep last night, but at least I managed to work out a lot today! Pretty hungry though, maybe I’ll eat again later."
+    m "Hey! I’m going as well as I can, didn’t get much sleep last night, but at least I managed to work out a lot today! Pretty hungry though, weird since my breakfast was kinda big."
 
     
-    y "Let’s head down to class then!"
+    player "Let’s head down to class then!"
     
     #somehow change slides here
    # e "Well- this game will be about helping people with diabetes? When you're up for it, press start okay??"
@@ -57,7 +56,7 @@ label start:
         You start walking to class, chatting aimlessly about the next impossible project that the professors have decided was an amazing idea.
         """
 
-        y "I’m telling you, there’s no way we’ll be able to finish it "
+        player "I’m telling you, there’s no way we’ll be able to finish it "
 
         """
         He stops, staring at the horizon and trying to intake air, looking a little queasy.
@@ -97,7 +96,7 @@ label start:
 
         m "Finally, we make it to class. 5 minutes before we’re due to start! Nice! Head hurts now, but that’s fine. Price we pay for speedwalking."
 
-        y "{i}This is starting to be a lot of symptoms that aren’t just from a long workout or a bad night of sleep. What should I do?{/i}" 
+        player "{i}This is starting to be a lot of symptoms that aren’t just from a long workout or a bad night of sleep. What should I do?{/i}" 
         
         menu:
 
@@ -113,7 +112,7 @@ label start:
         label buzz_check_blood:
 
         #  $ menu_flag = True
-            m "I don’t actually know. I’m really not feeling great, so I could just be sick. But everything came pretty suddenly. I’ll check it once we’re in class, I can’t reach my pocket right now."
+            m "I don’t actually know. I’m really not feeling great, so I could just be sick. But everything came pretty suddenly. I’ll check it once we’re in class, I don’t want to pull it out my pocket right now."
             """
             The two of you head inside and settle down in class.
             """
@@ -149,11 +148,18 @@ label start:
 
             #  $ menu_flag = True
                 """
-                Buzz pulls out his CGM (Continuous Glucose Monitor) and notices that it’s way too low! It’s under 70 mg/dl!
+                Buzz pulls out his CGM (Continuous Glucose Monitor) and notices that it’s way too low! It’s only 93 mg/dL!
                 """
-                m "Well that’s not great. Could you run and grab me a snack?"
+ 
+ 
+                "{i}This normally isn't a problem, but after eating breakfast, his average blood sugar should be closer to 140mg/dL{/i}"
+                "{i}This blood sugar level is comparable to that of a non-diabetic person having not eaten for over 5 hours{/i}"
 
-                y "You got it!"
+                m "Oh. That explains... This"
+                "Buzz gestures towards himself"
+                m "Could you run and grab me a snack?"
+
+                player "You got it!"
 
                 """
                 You run to the vending machine
@@ -170,24 +176,21 @@ label start:
                 label hard_candy:
 
                 #  $ menu_flag = True
-                    """
-                    Buzz pulls out his CGM (Continuous Glucose Monitor) and notices that it’s way too low! It’s under 70 mg/dl!
-                    """
-                    m "Well that’s not great. Could you run and grab me a snack?"
+                """
+                You come back to class holding a bag of Jolly Ranchers.
+                """
 
-                    y "You got it!"
+                m "Sweet! Pun Intended, that’s exactly what I needed! Thank you so much!"
 
-                    """
-                    You run to the vending machine
-                    """
-
-                    jump outside_class
+                jump choice3_done
                 
                 label peanuts:
 
-                    jump
-
-                jump outside_class
+                """
+                You come back to class holding a bag of peanuts
+                """
+                m "uhhhh- Not quite what I needed... but I'll take it"
+                jump bad_ending_screen
                 
 
             label class_continues:
@@ -201,18 +204,22 @@ label start:
             jump choice3_done
 
         label choice3_done:
-        
+            "You got his blood sugar to a normal range with that little sweet rush! Good job!!"
+            "Buzz started feeling a bit better within the hour."
+            return
         
         jump choice1_done
 
     label choice1_done:
-
 
     label vending_machine_ending_screen:
 
     label middle_ending_screen:
     
     label bad_ending_screen:
+        "Buzz quietly ate some peanuts before looking dazed"
+        "The person behind you gives him some fruit from their bag and worridly looks after him the rest of class"
+        "You seriously didn't know what to do huh?"
 
     label someone_else_called_911:
         # ... the game continues here.
