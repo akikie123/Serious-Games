@@ -2,9 +2,25 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 187: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-                        """
+File "game/script.rpy", line 235: end of line expected.
+    jump to found_unconcious_way_later
+            ^
+
+File "game/script.rpy", line 244: end of line expected.
+    jump to sweet_fruit_juice
+            ^
+
+File "game/script.rpy", line 247: end of line expected.
+    jump to beef_jerky
+            ^
+
+File "game/script.rpy", line 292: end of line expected.
+    jump to er_ending_screen
+            ^
+
+File "game/script.rpy", line 295: end of line expected.
+    jump to someone_else_calls_911
+            ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Dec  1 20:19:55 2022
+Fri Dec  2 13:55:37 2022

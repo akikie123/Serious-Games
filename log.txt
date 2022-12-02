@@ -1,63 +1,348 @@
-Thu Dec  1 20:37:37 2022
-Windows-10-10.0.22000
+Fri Dec  2 13:49:38 2022
+Windows-10-10.0.19044
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.04s
+Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.21s
-Loading save slot metadata. took 0.02s
+Loader init took 0.12s
+Loading error handling took 0.23s
+Loading script took 3.23s
+Loading save slot metadata. took 0.27s
 Loading persistent took 0.00s
-Faled to initialize steam: FileNotFoundError("Could not find module 'D:\\renpy-8.0.3-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\akila\\AppData\\Roaming/RenPy/backups\\SeriousGames':
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.02s
-DPI scale factor: 1.000000
+
+File "game/script.rpy", line 203: expected menuitem
+    jump found_sluggish
+    ^
+
+File "game/script.rpy", line 221: expected menuitem
+    jump you_check_CGM
+    ^
+
+File "game/script.rpy", line 232: expected menuitem
+    jump vending_machine_pt2
+    ^
+
+File "game/script.rpy", line 244: expected menuitem
+    jump to sweet_fruit_juice
+    ^
+
+File "game/script.rpy", line 292: expected menuitem
+    jump to er_ending_screen
+    ^
+DPI scale factor: 2.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.09s
+Interface start took 0.39s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
+primary display bounds: (0, 0, 2736, 1824)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'Intel'"
-Renderer: b'Intel(R) UHD Graphics 620'
-Version: b'4.6.0 - Build 26.20.100.7323'
+Renderer: b'Intel(R) Iris(R) Plus Graphics'
+Version: b'4.6.0 - Build 27.20.100.9621'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Screen sizes: virtual=(1920, 1080) physical=(2368, 1332) drawable=(2368, 1332)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.01s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init took 72.06s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.04s
+Loading script took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 203: expected menuitem
+    jump found_sluggish
+    ^
+
+File "game/script.rpy", line 221: expected menuitem
+    jump you_check_CGM
+    ^
+
+File "game/script.rpy", line 232: expected menuitem
+    jump vending_machine_pt2
+    ^
+
+File "game/script.rpy", line 244: expected menuitem
+    jump to sweet_fruit_juice
+    ^
+
+File "game/script.rpy", line 292: expected menuitem
+    jump to er_ending_screen
+    ^
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.20s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2736, 1824)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) Iris(R) Plus Graphics'
+Version: b'4.6.0 - Build 27.20.100.9621'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2368, 1332) drawable=(2368, 1332)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 75.69s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.03s
+Loading script took 0.12s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 203: expected menuitem
+    jump found_sluggish
+    ^
+
+File "game/script.rpy", line 221: expected menuitem
+    jump you_check_CGM
+    ^
+
+File "game/script.rpy", line 232: expected menuitem
+    jump vending_machine_pt2
+    ^
+
+File "game/script.rpy", line 244: expected menuitem
+    jump to sweet_fruit_juice
+    ^
+
+File "game/script.rpy", line 292: expected menuitem
+    jump to er_ending_screen
+    ^
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.19s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2736, 1824)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) Iris(R) Plus Graphics'
+Version: b'4.6.0 - Build 27.20.100.9621'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2368, 1332) drawable=(2368, 1332)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 84.01s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.04s
+Loading script took 0.13s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 202: choice menuitem expects a non-empty block.
+    "Poke him to see if he wakes up":
+                                     ^
+
+File "game/script.rpy", line 220: choice menuitem expects a non-empty block.
+    "Check his CGM for his blood sugar level":
+                                              ^
+
+File "game/script.rpy", line 231: choice menuitem expects a non-empty block.
+    "Run to the Vending Machine":
+                                 ^
+
+File "game/script.rpy", line 243: choice menuitem expects a non-empty block.
+    "Choose sweet fruit juice":
+                               ^
+
+File "game/script.rpy", line 291: choice menuitem expects a non-empty block.
+    "Call 911":
+               ^
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2736, 1824)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) Iris(R) Plus Graphics'
+Version: b'4.6.0 - Build 27.20.100.9621'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2368, 1332) drawable=(2368, 1332)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 159.87s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.04s
+Loading script took 0.10s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 235: end of line expected.
+    jump to found_unconcious_way_later
+            ^
+
+File "game/script.rpy", line 244: end of line expected.
+    jump to sweet_fruit_juice
+            ^
+
+File "game/script.rpy", line 247: end of line expected.
+    jump to beef_jerky
+            ^
+
+File "game/script.rpy", line 292: end of line expected.
+    jump to er_ending_screen
+            ^
+
+File "game/script.rpy", line 295: end of line expected.
+    jump to someone_else_calls_911
+            ^
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2736, 1824)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) Iris(R) Plus Graphics'
+Version: b'4.6.0 - Build 27.20.100.9621'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2368, 1332) drawable=(2368, 1332)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 314.42s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.03s
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 235: end of line expected.
+    jump to found_unconcious_way_later
+            ^
+
+File "game/script.rpy", line 244: end of line expected.
+    jump to sweet_fruit_juice
+            ^
+
+File "game/script.rpy", line 247: end of line expected.
+    jump to beef_jerky
+            ^
+
+File "game/script.rpy", line 292: end of line expected.
+    jump to er_ending_screen
+            ^
+
+File "game/script.rpy", line 295: end of line expected.
+    jump to someone_else_calls_911
+            ^
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2736, 1824)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) Iris(R) Plus Graphics'
+Version: b'4.6.0 - Build 27.20.100.9621'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2368, 1332) drawable=(2368, 1332)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 356.31s
+Early init took 0.00s
+Loader init took 0.05s
+Loading error handling took 0.06s
+Loading script took 0.17s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 235: end of line expected.
+    jump to found_unconcious_way_later
+            ^
+
+File "game/script.rpy", line 244: end of line expected.
+    jump to sweet_fruit_juice
+            ^
+
+File "game/script.rpy", line 247: end of line expected.
+    jump to beef_jerky
+            ^
+
+File "game/script.rpy", line 292: end of line expected.
+    jump to er_ending_screen
+            ^
+
+File "game/script.rpy", line 295: end of line expected.
+    jump to someone_else_calls_911
+            ^
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2736, 1824)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) Iris(R) Plus Graphics'
+Version: b'4.6.0 - Build 27.20.100.9621'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2368, 1332) drawable=(2368, 1332)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 358.78s
+Early init took 0.00s
+Loader init took 0.04s
+Loading error handling took 0.03s
+Loading script took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/script.rpy", line 235: end of line expected.
+    jump to found_unconcious_way_later
+            ^
+
+File "game/script.rpy", line 244: end of line expected.
+    jump to sweet_fruit_juice
+            ^
+
+File "game/script.rpy", line 247: end of line expected.
+    jump to beef_jerky
+            ^
+
+File "game/script.rpy", line 292: end of line expected.
+    jump to er_ending_screen
+            ^
+
+File "game/script.rpy", line 295: end of line expected.
+    jump to someone_else_calls_911
+            ^
+DPI scale factor: 2.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start took 0.18s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2736, 1824)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) Iris(R) Plus Graphics'
+Version: b'4.6.0 - Build 27.20.100.9621'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(2368, 1332) drawable=(2368, 1332)
+Maximum texture size: 4096x4096

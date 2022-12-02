@@ -182,7 +182,7 @@ label start:
 
                 m "Sweet! Pun Intended, that’s exactly what I needed! Thank you so much!"
 
-                jump choice3_done
+                jump vending_machine_ending_screen
                 
                 label peanuts:
 
@@ -190,29 +190,128 @@ label start:
                 You come back to class holding a bag of peanuts
                 """
                 m "uhhhh- Not quite what I needed... but I'll take it"
-                jump bad_ending_screen
-                
+                jump class_continues
 
             label class_continues:
 
             #   $ menu_flag = False
+                """
+                You pay attention to class for sometime, diligently taking notes and noticing that Buzz hasn’t lifted his head from the table in a while. 
+                """
+                menu: 
+                    "Poke him to see if he wakes up":
+                        jump found_sluggish
 
-                m "Oh yeah, I’m all good. Thanks for asking. Just tired after the workout and weirdly anxious about the project"
+                    "Let him sleep":
+                        jump found_unconcious_way_later
 
-                jump outside_class
+                label found_sluggish:
+                    """
+                    You decide to poke him a little bit, and find that he’s not responding at all! Not even a slap to let him sleep more!
+                    """
 
-            jump choice3_done
+                    y "Buzz? Buzz! Are you there, we need to learn about network hopping!"
 
-        label choice3_done:
+                    m ". . . hrggg? Sup? Is something wrong? Something is probably wrong, but something is always wrong."
+
+                    y "Uh oh, this doesn’t look to good."
+
+                    menu:
+                        "Check his CGM for his blood sugar level":
+                            jump you_check_CGM
+
+                        "Leave him alone":
+                            jump found_unconcious_way_later
+
+                    label you_check_CGM:
+                        """
+                        You pull out his CGM from his pocket. It’s way below 70dl/mg! That’s not good, what do you do now?!                        
+                        """
+                        menu:
+                            "Run to the Vending Machine":
+                                jump vending_machine_pt2
+
+                            "Panic silently":
+                                jump to found_unconcious_way_later
+
+                        label vending_maching_pt2:
+                            """
+                            You run to the vending machine.
+                            """
+
+                            menu:
+                                "Choose sweet fruit juice":
+                                    jump to sweet_fruit_juice
+
+                                "Choose beef jerky":
+                                    jump to beef_jerky
+
+                            label sweet_fruit_juice:
+                                """
+                                You come back to class holding a Minute Maid, and shake Buzz a little more to wake him up.
+                                """
+
+                                y "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple for now to get the blood sugar up?"
+
+                                m "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Hopefully after class I can go eat a meal."
+                                
+                                jump middle_ending_screen
+
+                            label beef_jerky:
+                                """
+                                You come back to class holding a bag of beef jerky.
+                                """
+
+                                y "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple for now to get the blood sugar up?"
+
+                                m "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Hopefully after class I can go eat a meal."
+                                
+                                m "Wait a second, these are nuts I don’t know how much this will help me."
+
+                                jump found_unconcious_way_later
+
+                label found_unconccious_way_later:
+                    """
+                    It’s now the end of class! And you two need to leave soon! So you poke Buzz to see if he wakes up.
+                    """
+
+                    y "Buzz, we have to go! Wake up!"
+
+                    m ". . ."
+
+                    y "Buzz? Buzz! Hello?!"
+
+                    m ". . ."
+
+                    """
+                    This doesn’t look good, what do you do??!!
+                    """
+
+                    menu:
+                        "Call 911":
+                            jump to er_ending_screen
+
+                        "Try to shake him awake":
+                            jump to someone_else_calls_911
+
+                    return
+
+                            
+            #jump vending_machine_ending_screen
+
+        label vending_machine_ending_screen:
             "You got his blood sugar to a normal range with that little sweet rush! Good job!!"
             "Buzz started feeling a bit better within the hour."
             return
         
-        jump choice1_done
+
+
+
+
 
     label choice1_done:
 
-    label vending_machine_ending_screen:
+
 
     label middle_ending_screen:
     
@@ -221,6 +320,7 @@ label start:
         "The person behind you gives him some fruit from their bag and worridly looks after him the rest of class"
         "You seriously didn't know what to do huh?"
 
+    label er_ending_screen:
     label someone_else_called_911:
         # ... the game continues here.
 
