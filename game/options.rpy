@@ -150,7 +150,7 @@ define config.save_directory = "SeriousGames-1667480655"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/newIcon.png"
 
 
 ## Build configuration #########################################################

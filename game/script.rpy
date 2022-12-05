@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define m = Character("Buzz", color=(196, 196, 11, 255))
+define buzz = Character("Buzz", color=(196, 196, 11, 255))
 define player = Character("You", color=(222, 34, 213, 255))
 
 
@@ -30,7 +30,7 @@ label start:
     
     player "Hey Buzz! How’s it going? Are you ready for CS 2200 to steamroll us again?"
     
-    m "Hey! I’m going as well as I can, didn’t get much sleep last night, but at least I managed to work out a lot today! Pretty hungry though, weird since my breakfast was kinda big."
+    buzz "Hey! I’m going as well as I can, didn’t get much sleep last night, but at least I managed to work out a lot today! Pretty hungry though, weird since my breakfast was kinda big."
 
     
     player "Let’s head down to class then!"
@@ -49,6 +49,7 @@ label start:
 
     label conversation_to_class:
 
+        player "you okay there Buzz?"
         
         """
         You start walking to class, chatting aimlessly about the next impossible project that the professors have decided was an amazing idea.
@@ -82,7 +83,7 @@ label start:
 
         #   $ menu_flag = False
 
-            m "Oh yeah, I’m all good. Thanks for asking. Just tired after the workout and weirdly anxious about the project"
+            buzz "Oh yeah, I’m all good. Thanks for asking. Just tired after the workout and weirdly anxious about the project"
 
             jump outside_class
 
@@ -92,7 +93,7 @@ label start:
 
         $ menu_flag = False
 
-        m "Finally, we make it to class. 5 minutes before we’re due to start! Nice! Head hurts now, but that’s fine. Price we pay for speedwalking."
+        buzz "Finally, we make it to class. 5 minutes before we’re due to start! Nice! Head hurts now, but that’s fine. Price we pay for speedwalking."
 
         player "{i}This is starting to be a lot of symptoms that aren’t just from a long workout or a bad night of sleep. What should I do?{/i}" 
         
@@ -110,7 +111,7 @@ label start:
         label buzz_check_blood:
 
         #  $ menu_flag = True
-            m "I don’t actually know. I’m really not feeling great, so I could just be sick. But everything came pretty suddenly. I’ll check it once we’re in class, I don’t want to pull it out my pocket right now."
+            buzz "I don’t actually know. I’m really not feeling great, so I could just be sick. But everything came pretty suddenly. I’ll check it once we’re in class, I don’t want to pull it out my pocket right now."
             """
             The two of you head inside and settle down in class.
             """
@@ -120,19 +121,25 @@ label start:
 
         #   $ menu_flag = False
 
-            m "Let’s just sit down in class first and I’ll solve it in there."
+            buzz "Let’s just sit down in class first and I’ll solve it in there."
 
             jump in_class
 
         label in_class:
 
         #   $ menu_flag = False
+            scene uhm
+            with Dissolve(1.5)
+            pause 10.5
+            scene classroom
+            with Dissolve(.5)
+ 
             """
             Both of you pull out your laptops and prepare to start taking notes
 
             """
 
-            m "I think I’m going to put my head down for a bit. It’s not doing to great with both the headache and the amount of trauma this room has given me from 2200 Tests."
+            buzz "I think I’m going to put my head down for a bit. It’s not doing to great with both the headache and the amount of trauma this room has given me from 2200 Tests."
 
             menu:
 
@@ -153,9 +160,9 @@ label start:
                 "{i}This normally isn't a problem, but after eating breakfast, his average blood sugar should be closer to 140mg/dL{/i}"
                 "{i}This blood sugar level is comparable to that of a non-diabetic person having not eaten for over 5 hours{/i}"
 
-                m "Oh. That explains... This"
+                buzz "Oh. That explains... This"
                 "Buzz gestures towards himself"
-                m "Could you run and grab me a snack?"
+                buzz "Could you run and grab me a snack?"
 
                 player "You got it!"
 
@@ -178,7 +185,7 @@ label start:
                 You come back to class holding a bag of Jolly Ranchers.
                 """
 
-                m "Sweet! Pun Intended, that’s exactly what I needed! Thank you so much!"
+                buzz "Sweet! Pun Intended, that’s exactly what I needed! Thank you so much!"
 
                 jump vending_machine_ending_screen
                 
@@ -187,7 +194,7 @@ label start:
                 """
                 You come back to class holding a bag of peanuts
                 """
-                m "uhhhh- Not quite what I needed... but I'll take it"
+                buzz "uhhhh- Not quite what I needed... but I'll take it"
                 jump class_continues
 
             label class_continues:
@@ -210,7 +217,7 @@ label start:
 
                     player "Buzz? Buzz! Are you there, we need to learn about network hopping!"
 
-                    m ". . . hrggg? Sup? Is something wrong? Something is probably wrong, but something is always wrong."
+                    buzz ". . . hrggg? Sup? Is something wrong? Something is probably wrong, but something is always wrong."
 
                     player "Uh oh, this doesn’t look to good."
 
@@ -251,7 +258,7 @@ label start:
 
                                 player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple for now to get the blood sugar up?"
 
-                                m "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
+                                buzz "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
                                 
                                 jump middle_ending_screen
 
@@ -262,9 +269,9 @@ label start:
 
                                 player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple for now to get the blood sugar up?"
 
-                                m "Hmm? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
+                                buzz "Hmm? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
                                 
-                                m "Wait a second, beef jerky? I don’t know how much this will help me."
+                                buzz "Wait a second, beef jerky? I don’t know how much this will help me."
 
                                 jump found_unconcious_way_later
 
@@ -275,11 +282,11 @@ label start:
 
                     player "Buzz, we have to go! Wake up!"
 
-                    m ". . ."
+                    buzz ". . ."
 
                     player "Buzz? Buzz! Hello?!"
 
-                    m ". . ."
+                    buzz ". . . . . . . . . ."
 
                     """
                     This doesn’t look good, what do you do??!!

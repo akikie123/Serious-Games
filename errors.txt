@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 292: end of line expected.
-    jump to er_ending_screen
-            ^
-
-File "game/script.rpy", line 295: end of line expected.
-    jump to someone_else_calls_911
-            ^
+File "game/script.rpy", line 130: expected statement.
+    zoom 2.0
+          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Dec  2 14:16:37 2022
+Mon Dec  5 14:50:59 2022
