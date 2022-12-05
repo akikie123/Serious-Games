@@ -50,6 +50,7 @@ label start:
     label conversation_to_class:
 
         player "you okay there Buzz?"
+        buzz "yeah. think I did overkill with my workout. haaa."
         
         """
         You start walking to class, chatting aimlessly about the next impossible project that the professors have decided was an amazing idea.
@@ -58,7 +59,7 @@ label start:
         player "I’m telling you, there’s no way we’ll be able to finish it "
 
         """
-        He stops, staring at the horizon and trying to intake air, looking a little queasy.
+        Buzz stops, staring at the horizon and trying to intake air, looking a little queasy.
         """
 
         #jump choice1_done
@@ -75,6 +76,7 @@ label start:
 
         #  $ menu_flag = True
             """
+            Buzz continues like nothing is happening.
             The two of you quickly walk to class.
             """
             jump outside_class
@@ -93,9 +95,9 @@ label start:
 
         $ menu_flag = False
 
-        buzz "Finally, we make it to class. 5 minutes before we’re due to start! Nice! Head hurts now, but that’s fine. Price we pay for speedwalking."
+        buzz "Finally, we made it to class. 5 minutes before it starts! Nice! Head hurts now, but that’s fine. Price we pay for speedwalking."
 
-        player "{i}This is starting to be a lot of symptoms that aren’t just from a long workout or a bad night of sleep. What should I do?{/i}" 
+        player "Headache, uneven walking, clamy look. {i}This is starting to be a lot of symptoms that aren’t just from a long workout or a bad night of sleep. What should I do?{/i}" 
         
         menu:
 
@@ -121,7 +123,7 @@ label start:
 
         #   $ menu_flag = False
 
-            buzz "Let’s just sit down in class first and I’ll solve it in there."
+            buzz "I should be. Let’s just sit down in class first and I’ll solve it in there."
 
             jump in_class
 
@@ -135,7 +137,7 @@ label start:
             with Dissolve(.5)
  
             """
-            Both of you pull out your laptops and prepare to start taking notes
+            Both of you pull out your laptops and prepare to start taking notes.
 
             """
 
@@ -185,7 +187,7 @@ label start:
                 You come back to class holding a bag of Jolly Ranchers.
                 """
 
-                buzz "Sweet! Pun Intended, that’s exactly what I needed! Thank you so much!"
+                buzz "Sweet! Pun intended, that’s exactly what I needed! Thank you so much!"
 
                 jump vending_machine_ending_screen
                 
@@ -195,6 +197,9 @@ label start:
                 You come back to class holding a bag of peanuts
                 """
                 buzz "uhhhh- Not quite what I needed... but I'll take it"
+                """
+                Buzz munches on a few peanuts before putting his head back down.
+                """
                 jump class_continues
 
             label class_continues:
@@ -212,12 +217,12 @@ label start:
 
                 label found_sluggish:
                     """
-                    You decide to poke him a little bit, and find that he’s not responding at all! Not even a slap to let him sleep more!
+                    You decide to poke him a little bit, and find that he’s not responding at all! Not even a slap makes him react!
                     """
 
                     player "Buzz? Buzz! Are you there, we need to learn about network hopping!"
 
-                    buzz ". . . hrggg? Sup? Is something wrong? Something is probably wrong, but something is always wrong."
+                    buzz ". . . huh? Sup? Is something wrong? Something is probably wrong, but something is always wrong."
 
                     player "Uh oh, this doesn’t look to good."
 
@@ -256,7 +261,7 @@ label start:
                                 You come back to class holding a Minute Maid, and shake Buzz a little more to wake him up.
                                 """
 
-                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple for now to get the blood sugar up?"
+                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple sips for now to get the blood sugar up?"
 
                                 buzz "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
                                 
@@ -267,7 +272,7 @@ label start:
                                 You come back to class holding a bag of beef jerky.
                                 """
 
-                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple for now to get the blood sugar up?"
+                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple bites for now to get the blood sugar up?"
 
                                 buzz "Hmm? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
                                 
