@@ -3,8 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Jack", color=(66, 221, 241, 255))
-define m = Character("Buzz", color=(221, 15, 176, 255))
+define m = Character("Buzz", color=(196, 196, 11, 255))
 define player = Character("You", color=(222, 34, 213, 255))
 
 
@@ -26,7 +25,7 @@ label start:
     # These display lines of dialogue.
 
     """
-      You and Buzz are meeting up one day before class! Buzz is a known diabetic, and but recently his mind has been occupied by school and responsibilities.
+    You and Buzz are meeting up one day before class! Buzz is a known diabetic, and but recently his mind has been occupied by school and responsibilities.
     """
     
     player "Hey Buzz! How’s it going? Are you ready for CS 2200 to steamroll us again?"
@@ -36,8 +35,7 @@ label start:
     
     player "Let’s head down to class then!"
     
-    #somehow change slides here
-   # e "Well- this game will be about helping people with diabetes? When you're up for it, press start okay??"
+    ###somehow change slides here
     """
     As you walk, Buzz seems to be shaking a little bit as he talks, but you’re not sure if it’s just because it’s cold outside or because of something else.
     """
@@ -51,7 +49,7 @@ label start:
 
     label conversation_to_class:
 
-      #  $ menu_flag = True
+        
         """
         You start walking to class, chatting aimlessly about the next impossible project that the professors have decided was an amazing idea.
         """
@@ -92,7 +90,7 @@ label start:
 
     label outside_class:
 
-     #   $ menu_flag = False
+        $ menu_flag = False
 
         m "Finally, we make it to class. 5 minutes before we’re due to start! Nice! Head hurts now, but that’s fine. Price we pay for speedwalking."
 
@@ -225,7 +223,7 @@ label start:
 
                     label you_check_CGM:
                         """
-                        You pull out his CGM from his pocket. It’s way below 70dl/mg! That’s not good, what do you do now?!                        
+                        You pull out his CGM from his pocket. It’s below 90dl/mg! That’s not good, what do you do now?!                        
                         """
                         menu:
                             "Run to the Vending Machine":
@@ -266,11 +264,11 @@ label start:
 
                                 m "Hmm? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
                                 
-                                m "Wait a second, these are nuts I don’t know how much this will help me."
+                                m "Wait a second, beef jerky? I don’t know how much this will help me."
 
                                 jump found_unconcious_way_later
 
-                label found_unconccious_way_later:
+                label found_unconcious_way_later:
                     """
                     It’s now the end of class! And you two need to leave soon! So you poke Buzz to see if he wakes up.
                     """
@@ -295,31 +293,21 @@ label start:
                             jump someone_else_calls_911
 
                     return
+                   
+    #jump vending_machine_ending_screen
 
-                            
-            #jump vending_machine_ending_screen
-
-        label vending_machine_ending_screen:
-            "You got his blood sugar to a normal range with that little sweet rush! Good job!!"
-            "Buzz started feeling a bit better within the hour."
-            return
+    label vending_machine_ending_screen:
+        "You got his blood sugar to a normal range with that little sweet rush! Good job!!"
+        "Buzz started feeling a bit better within the hour."
+        jump info_end
         
-
-
-
-
-
-    label choice1_done:
-
-
-
     label middle_ending_screen:
         """
         Though a little late to notice, you got Buzz just what he needed. 
         He felt well enough within the hour and decided to go back to his dorm to rest. 
         """
         "nice save."
-        return
+        jump info_end
     
     label bad_ending_screen:
         "Buzz quietly ate some peanuts before looking dazed"
@@ -327,13 +315,39 @@ label start:
         "You seriously didn't know what to do huh?"
 
     label er_ending_screen:
+        """
+        On the down side, you did not get Buzz the extra sugar rush that he needed in time.
+        On the bright side, at least you recognized when you needed to call a professional in.
+        He's doing a lot better now! Just had a little bit of a scare, and is resting at home now.
+        """
+        jump info_end
+
     label someone_else_called_911:
-        # ... the game continues here.
+        """
+        On the very down side, neither did you realize that Buzz was unconscious earlier, but you also didn't quite know what to do.
+        That's okay though! Someone else was able to swoop in and save the day! And now you know for next time what not to do!
+        """
 
- 
-    ## show buzz
+        jump info_end
+        
+    label info_end:
+        """
+        What you just saw in this scenario was a case of hypoglycemia! The further you progressed into th egame, the more sever the case became!
 
-    ## e ""
+        Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than the standard range, and it can happen for a large number of reasons. 
+
+        Some causes can include skipping meals, increasing exercise levels, and drinking alcohol.
+
+        Some of the symptoms include shakiness, headaches, blurred vision, confusion, nervousness, and many more.
+
+        At a non-professional level, some of the best treatment for someone that is suffering from hypoglycemia, especially a diabetic, is to give them something that is high in sugar content. This could be candy, soda, juice.
+        Especially things high in natural sugars such a raisins or other fruits.
+
+        Once the person loses consciousness or there appear to be other abnormal or worrying symptoms, please call a professional or take them to the hospital.
+
+        (Please note that we are not medical professionals)
+        """
+        return
 
     # This ends the game.
 
