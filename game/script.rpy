@@ -25,7 +25,7 @@ label start:
     # These display lines of dialogue.
 
     """
-    You and Buzz are meeting up one day before class! Buzz is a known diabetic, and but recently his mind has been occupied by school and responsibilities.
+    You and Buzz are meeting up one day before class! Buzz is a known diabetic, but recently his mind has been occupied by school and responsibilities.
     """
     
     player "Hey Buzz! How’s it going? Are you ready for CS 2200 to steamroll us again?"
@@ -56,7 +56,7 @@ label start:
         You start walking to class, chatting aimlessly about the next impossible project that the professors have decided was an amazing idea.
         """
 
-        player "I’m telling you, there’s no way we’ll be able to finish it "
+        player "I’m telling you, there’s no way we’ll be able to finish it."
 
         """
         Buzz stops, staring at the horizon and trying to intake air, looking a little queasy.
@@ -76,7 +76,7 @@ label start:
 
         #  $ menu_flag = True
             """
-            Buzz continues like nothing is happening.
+            Buzz continues on like nothing happened.
             The two of you quickly walk to class.
             """
             jump outside_class
@@ -123,7 +123,7 @@ label start:
 
         #   $ menu_flag = False
 
-            buzz "I should be. Let’s just sit down in class first and I’ll solve it in there."
+            buzz "I should be. But since you're obviously worried- let’s just sit down in class first and I’ll solve it in there."
 
             jump in_class
 
@@ -194,7 +194,7 @@ label start:
                 label peanuts:
 
                 """
-                You come back to class holding a bag of peanuts
+                You come back to class holding a bag of peanuts.
                 """
                 buzz "uhhhh- Not quite what I needed... but I'll take it"
                 """
