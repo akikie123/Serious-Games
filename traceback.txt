@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 232, in script
-    jump vending_machine_pt2
-ScriptError: could not find label 'vending_machine_pt2'.
+  File "game/script.rpy", line 305, in script
+    jump someone_else_calls_911
+ScriptError: could not find label 'someone_else_calls_911'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 232, in script
-    jump vending_machine_pt2
+  File "game/script.rpy", line 305, in script
+    jump someone_else_calls_911
   File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
     rv = renpy.game.script.lookup(target)
   File "D:\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'vending_machine_pt2'.
+ScriptError: could not find label 'someone_else_calls_911'.
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 Serious Games 1.0
-Fri Dec  2 14:22:02 2022
+Mon Feb 20 12:29:12 2023

@@ -302,7 +302,7 @@ label start:
                             jump er_ending_screen
 
                         "Try to shake him awake":
-                            jump someone_else_calls_911
+                            jump someone_else_called_911
 
                     return
                    
