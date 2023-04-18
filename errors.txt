@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 130: expected statement.
-    zoom 2.0
-          ^
+File "game/script.rpy", line 27: end of line expected.
+    show uhm at true center
+                     ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Dec  5 14:50:59 2022
+Mon Apr 17 20:53:21 2023

@@ -1,22 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 305, in script
-    jump someone_else_calls_911
-ScriptError: could not find label 'someone_else_calls_911'.
+  File "game/script.rpy", line 19, in script
+    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
+  File "game/script.rpy", line 19, in script
+    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
+  File "game/script.rpy", line 19, in <module>
+    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
+NameError: name 'target_data' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 305, in script
-    jump someone_else_calls_911
-  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
-    rv = renpy.game.script.lookup(target)
-  File "D:\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'someone_else_calls_911'.
+  File "D:\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "D:\renpy-8.0.3-sdk\renpy\main.py", line 558, in main
+    renpy.game.context().run(node)
+  File "game/script.rpy", line 19, in script
+    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
+  File "game/script.rpy", line 19, in script
+    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1230, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "D:\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
+NameError: name 'target_data' is not defined
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 Serious Games 1.0
-Mon Feb 20 12:29:12 2023
+Mon Apr 17 20:39:07 2023

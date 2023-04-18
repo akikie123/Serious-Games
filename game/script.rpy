@@ -8,14 +8,23 @@ define player = Character("You", color=(222, 34, 213, 255))
 
 
 # The game starts here.
+label splashscreen:
+    scene black
+    with Pause(1)
 
+    show text "VIP: Serious Games presents...." with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+
+    return
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-
-    scene uhm
+    scene plz
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -130,9 +139,9 @@ label start:
         label in_class:
 
         #   $ menu_flag = False
-            scene uhm
-            with Dissolve(1.5)
-            pause 10.5
+            #scene uhm
+            with Dissolve(.5)
+            pause 0.5
             scene classroom
             with Dissolve(.5)
  
