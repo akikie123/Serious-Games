@@ -139,7 +139,6 @@ label start:
         label in_class:
 
         #   $ menu_flag = False
-            #scene uhm
             with Dissolve(.5)
             pause 0.5
             scene classroom
