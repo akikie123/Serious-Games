@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Script2.rpy", line 1: expected ':' not found.
-    label scenario2
-                   ^
+File "game/Script2.rpy", line 94: choice menuitem expects a non-empty block.
+    "Let him be, he is gonna need it for today.":
+                                                 ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Apr 21 01:19:20 2023
+Fri Apr 21 15:00:35 2023

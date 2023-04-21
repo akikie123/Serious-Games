@@ -29,7 +29,7 @@ label start:
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-    $playerName = renpy.input("What is your name?", length = 10)
+    $playerName = renpy.input("What is your name?", length = 15)
     $playerName = playerName.strip()
     $if not playerName: playerName = "Techie"
     # These display lines of dialogue.
@@ -81,16 +81,16 @@ label start:
     label conversation_to_class:
 
         player "you okay there Buzz?"
-        buzz "yeah. think I did overkill with my workout. haaa."
+        buzz "yeah. think I did too much with my workout. haaa."
         
         """
-        You start walking to class, chatting aimlessly about the next impossible project that the professors have decided was an amazing idea.
+        You start walking to class, lightheartedly chatting about the next impossible project that the professors have decided was an amazing idea.
         """
 
         player "I’m telling you, there’s no way we’ll be able to finish it."
 
         """
-        Buzz stops, staring at the horizon and trying to intake air, looking a little queasy.
+        Buzz stops, staring blankly and breathing h eavily, looking a little queasy.
         """
 
         #jump choice1_done
@@ -126,13 +126,19 @@ label start:
 
         $ menu_flag = False
 
-        buzz "Barely made it. 5 minutes before it starts! Nice! Head hurts now, but that’s fine. Price we pay for speedwalking."
+        buzz "Barely made it. 5 minutes before it starts! Nice! My head hurts now, but that’s fine. Price we pay for basically sprinting here."
 
-        player "Headache, uneven walking, clamy look. {i}This is starting to be a lot of symptoms that aren’t just from a long workout or a bad night of sleep. What should I do?{/i}" 
+        """
+        Buzz speaks in an upbeat tone...
+        """
+        """
+        but he looks sickly.
+        """
+        player "{i}Headache, uneven walking, pale and clammy look. This is starting to be a lot of symptoms that aren’t just from a long workout or a bad night of sleep. What should I do?{/i}" 
         
         menu:
 
-            "Usher the both of you into class. He’s probably fine.":
+            "Usher the both of you into class. He just needs to sit a while.":
                 jump in_class
 
             "Ask “Are you sure you’re okay?”":
@@ -374,7 +380,7 @@ label start:
         
     label info_end:
         """
-        What you just saw in this scenario was a case of hypoglycemia! The further you progressed into th egame, the more severe the case became!
+        What you just saw in this scenario was a case of hypoglycemia! The further you progressed into the game, the more severe the case became!
 
         Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than the standard range, and it can happen for a large number of reasons. 
 
