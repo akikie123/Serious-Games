@@ -4,7 +4,7 @@
 # name of the character.
 
 define buzz = Character("Buzz", color=(196, 196, 11, 255))
-define player = Character("You", color=(222, 34, 213, 255))
+define player = Character("[playerName]", color=(222, 34, 213, 255))
 
 
 # The game starts here.
@@ -29,8 +29,8 @@ label start:
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-
-
+    $playerName = renpy.input("What is your name?", length = 10)
+    $playerName = playerName.strip()
     # These display lines of dialogue.
 
     """
@@ -39,14 +39,21 @@ label start:
     
     player "Hey Buzz! How’s it going? Are you ready for CS 2200 to steamroll us again?"
     
-    buzz "Hey! I’m going as well as I can, didn’t get much sleep last night, but at least I managed to work out a lot today! Pretty hungry though, weird since my breakfast was kinda big."
+    buzz "Ugh. Don't even {b}mention{/b} it. I didn’t get much sleep grinding the homework, but at least I still managed to go work out this morning!"
+    buzz "I'm hungry though, weird since my breakfast was kinda big."
 
     
-    player "Let’s head down to class then!"
+    player "Maybe grab a snack from the vending machine?"
+    player "We should head to class though or we are gonna be late!"
     
-    ###somehow change slides here
+    ###somehow change slides here: the following is the scene swap psuedocode
+    ### with Dissolve(.5)
+    ### pause 0.5
+    ### scene - downhill on ferst (whatever image that may be)
+    ### with Dissolve(.5)
+
     """
-    As you walk, Buzz seems to be shaking a little bit as he talks, but you’re not sure if it’s just because it’s cold outside or because of something else.
+    As you walk,you notice Buzz's voice shaking slightly as he talks, but you’re not sure if it’s just because it’s cold outside or not.
     """
     menu:
 

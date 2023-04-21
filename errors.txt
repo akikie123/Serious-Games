@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 27: end of line expected.
-    show uhm at true center
-                     ^
+File "game/script.rpy", line 35: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
+    $if not playerName:
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Apr 17 20:53:21 2023
+Thu Apr 20 23:05:32 2023
