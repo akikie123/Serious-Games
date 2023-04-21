@@ -126,7 +126,7 @@ label start:
 
         $ menu_flag = False
 
-        buzz "Finally, we made it to class. 5 minutes before it starts! Nice! Head hurts now, but that’s fine. Price we pay for speedwalking."
+        buzz "Barely made it. 5 minutes before it starts! Nice! Head hurts now, but that’s fine. Price we pay for speedwalking."
 
         player "Headache, uneven walking, clamy look. {i}This is starting to be a lot of symptoms that aren’t just from a long workout or a bad night of sleep. What should I do?{/i}" 
         
@@ -374,11 +374,11 @@ label start:
         
     label info_end:
         """
-        What you just saw in this scenario was a case of hypoglycemia! The further you progressed into th egame, the more sever the case became!
+        What you just saw in this scenario was a case of hypoglycemia! The further you progressed into th egame, the more severe the case became!
 
         Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than the standard range, and it can happen for a large number of reasons. 
 
-        Some causes can include skipping meals, increasing exercise levels, and drinking alcohol.
+        Some causes can include skipping meals, increased exercise levels, and drinking alcohol.
 
         Some of the symptoms include shakiness, headaches, blurred vision, confusion, nervousness, and many more.
 
