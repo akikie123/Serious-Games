@@ -1,35 +1,68 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 19, in script
-    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
-  File "game/script.rpy", line 19, in script
-    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
-  File "game/script.rpy", line 19, in <module>
-    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
-NameError: name 'target_data' is not defined
+While processing text tag {} in '{i}{b}VIP: Serious Games presents....{\x08}{\\i}'.:
+  File "renpy/common/00start.rpy", line 240, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/script.rpy", line 15, in script
+    show text "{i}{b}VIP: Serious Games presents....{\b}{\i}" with dissolve
+Exception: Unknown text tag '\x08'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "D:\renpy-8.0.3-sdk\renpy\bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "D:\renpy-8.0.3-sdk\renpy\main.py", line 558, in main
-    renpy.game.context().run(node)
-  File "game/script.rpy", line 19, in script
-    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "game/script.rpy", line 19, in script
-    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
-  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1230, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "D:\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 19, in <module>
-    image woohoo = im.Scale("images/uhm,jpg",target_data[0], target_data[1])
-NameError: name 'target_data' is not defined
+  File "renpy/common/00start.rpy", line 240, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/script.rpy", line 15, in script
+    show text "{i}{b}VIP: Serious Games presents....{\b}{\i}" with dissolve
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1658, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "D:\renpy-8.0.3-sdk\renpy\exports.py", line 1657, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 2798, in do_with
+    return self.interact(trans_pause=True,
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 3912, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 2602, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 495, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\renpy-8.0.3-sdk\renpy\display\transition.py", line 378, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\renpy-8.0.3-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\renpy-8.0.3-sdk\renpy\display\transform.py", line 747, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\renpy-8.0.3-sdk\renpy\display\image.py", line 506, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "D:\renpy-8.0.3-sdk\renpy\display\image.py", line 309, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "D:\renpy-8.0.3-sdk\renpy\text\text.py", line 2109, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "D:\renpy-8.0.3-sdk\renpy\text\text.py", line 627, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "D:\renpy-8.0.3-sdk\renpy\text\text.py", line 1278, in segment
+    raise Exception("Unknown text tag %r" % text)
+Exception: Unknown text tag '\x08'
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
-Serious Games 1.0
-Mon Apr 17 20:39:07 2023
+Serious Games 1.8
+Thu Apr 20 23:31:23 2023

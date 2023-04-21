@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 35: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation.
-    $if not playerName:
-    ^
+File "game/Script2.rpy", line 1: expected ':' not found.
+    label scenario2
+                   ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Apr 20 23:05:32 2023
+Fri Apr 21 01:19:20 2023

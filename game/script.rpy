@@ -12,7 +12,7 @@ label splashscreen:
     scene black
     with Pause(1)
 
-    show text "VIP: Serious Games presents...." with dissolve
+    show text "{i}{b}VIP: Serious Games presents....{/b}{/i}" with dissolve
     with Pause(2)
 
     hide text with dissolve
@@ -24,17 +24,32 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-    scene plz
+    scene bluesky
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
     $playerName = renpy.input("What is your name?", length = 10)
     $playerName = playerName.strip()
+    $if not playerName: playerName = "Techie"
     # These display lines of dialogue.
 
+    menu:
+        "Begin scenario 1":
+            jump scenario1
+
+        "Begin scenario 2":
+            jump scenario2
+
+    label scenario1:
+
+    with Dissolve(.5)
+    pause 0.5
+    scene plz
+    ### with Dissolve(.5)
     """
-    You and Buzz are meeting up one day before class! Buzz is a known diabetic, but recently his mind has been occupied by school and responsibilities.
+    You and Buzz are meeting up one day before class! 
+    Buzz is a known diabetic, but recently he has been preoccupied with school and responsibilities.
     """
     
     player "Hey Buzz! How’s it going? Are you ready for CS 2200 to steamroll us again?"
