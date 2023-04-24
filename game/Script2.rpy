@@ -1,5 +1,9 @@
 label scenario2:
 ### need to put ESE or fitten lobby photo here as scene!!!!!!
+with Dissolve(.5)
+pause 0.5
+scene rsz_lobby
+with Dissolve(.5)
 """
 It's another great day at Georgia Tech, sir yes sir! 
 """
@@ -14,7 +18,7 @@ But that's fine. You and Buzz are about to head over to Willage to study and des
 """
 buzz "Yo!"
 """
-Buzz appears from the doorway.
+Buzz appears from around the corner.
 """
 player "Hey Buzz, there you are! Make it down the stairs okay with your old bones?"
 buzz "We are literally the same age."
@@ -22,6 +26,9 @@ player "Sure sure, whatever you say gramps. You got everything?"
 buzz "Yeah!"
 
 ### now walking to willage - picture needed outside ESE lobby stairs (facing crecine) as scene!!!!!
+with Dissolve(.5)
+pause 0.5
+scene wut
 buzz "Ugh the sunlight hurts. Spent too many days holed up working."
 player "uh oh, what’s been keeping you hostage?"
 buzz "We have our exams soon yet 3 of my classes have a project due within the next week or 2."
@@ -47,9 +54,15 @@ label csMajorMoment:
     jump intoWillage
 
 label intoWillage:
+    with Dissolve(.5)
+    pause 0.5
+    scene willage_out
     """
     You finally arrive at Willage.
     """
+    with Dissolve(.5)
+    pause 0.5
+    scene willage_bf
     """
     Even though you are on the bottom floor, there is a sweet scent in the air.
     """

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Script2.rpy", line 94: choice menuitem expects a non-empty block.
-    "Let him be, he is gonna need it for today.":
-                                                 ^
+File "game/Script2.rpy", line 4: Line is indented, but the preceding with statement statement does not expect a block. Please check this line's indentation.
+    pause 0.5
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Apr 21 15:00:35 2023
+Mon Apr 24 11:15:25 2023
