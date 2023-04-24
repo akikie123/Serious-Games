@@ -82,7 +82,7 @@ label intoWillage:
         player "You sure you don't want to nap?"
         player "Being on coffee, sugar and energy drinks is no good. We can always study later."
         buzz " Nahhhh, it’s alright. My vision is only a little blurry right now from trying to wake up."
-        buzz "Thanks for the concern though"
+        buzz "Thanks for the concern though."
         jump studyingIntensifies
 
     label study:

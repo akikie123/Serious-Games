@@ -62,9 +62,9 @@ label start:
     player "We should head to class though or we are gonna be late!"
     
     ###somehow change slides here: the following is the scene swap psuedocode
-    ### with Dissolve(.5)
-    ### pause 0.5
-    ### scene - downhill on ferst (whatever image that may be)
+    with Dissolve(.5)
+    pause 0.5
+    scene ferst
     ### with Dissolve(.5)
 
     """
@@ -123,6 +123,9 @@ label start:
         jump outside_class
 
     label outside_class:
+        with Dissolve(.5)
+        pause 0.5
+        scene outclass
 
         $ menu_flag = False
 
@@ -207,7 +210,9 @@ label start:
                 """
                 You run to the vending machine
                 """
-
+                with Dissolve(.5)
+                pause 0.5
+                scene vending
                 menu:
 
                     "Choose a pack of hard candy":
@@ -219,6 +224,10 @@ label start:
                 label hard_candy:
 
                 #  $ menu_flag = True
+                with Dissolve(.5)
+                pause 0.5
+                scene classroom
+                with Dissolve(.5)
                 """
                 You come back to class holding a bag of Jolly Ranchers.
                 """
@@ -232,6 +241,10 @@ label start:
                 """
                 You come back to class holding a bag of peanuts.
                 """
+                with Dissolve(.5)
+                pause 0.5
+                scene classroom
+                with Dissolve(.5)
                 buzz "uhhhh- Not quite what I needed... but I'll take it"
                 """
                 Buzz munches on a few peanuts before putting his head back down.
@@ -284,7 +297,10 @@ label start:
                             """
                             You run to the vending machine.
                             """
-
+                            with Dissolve(.5)
+                            pause 0.5
+                            scene vending
+                            with Dissolve(.5)
                             menu:
                                 "Choose sweet fruit juice":
                                     jump sweet_fruit_juice
@@ -293,10 +309,14 @@ label start:
                                     jump beef_jerky
 
                             label sweet_fruit_juice:
+                                with Dissolve(.5)
+                                pause 0.5
+                                scene classroom
+                                with Dissolve(.5)
                                 """
                                 You come back to class holding a Minute Maid, and shake Buzz a little more to wake him up.
                                 """
-
+            
                                 player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple sips for now to get the blood sugar up?"
 
                                 buzz "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
@@ -304,6 +324,10 @@ label start:
                                 jump middle_ending_screen
 
                             label beef_jerky:
+                                with Dissolve(.5)
+                                pause 0.5
+                                scene classroom
+                                with Dissolve(.5)
                                 """
                                 You come back to class holding a bag of beef jerky.
                                 """
@@ -358,8 +382,8 @@ label start:
         jump info_end
     
     label bad_ending_screen:
-        "Buzz quietly ate some peanuts before looking dazed"
-        "The person behind you gives him some fruit from their bag and worridly looks after him the rest of class"
+        "Buzz quietly ate some peanuts before looking dazed."
+        "The person behind you gives him some fruit from their bag and worridly looks after him the rest of class."
         "You seriously didn't know what to do huh?"
 
     label er_ending_screen:
