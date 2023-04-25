@@ -13,3 +13,6 @@ To install and work using Renpy <br />
 ![image](https://user-images.githubusercontent.com/114409449/199749124-e97642b2-2e30-42ef-b78d-c36a4e372a7d.png) <br />
   the screen should look like this once renpy is open. <br />
 There is a tutorial to help understand how to do various elements, if you have any other questions feel free to ask. 
+
+PROJECT NOTE
+- when adding images, renpy cannot see image file names that have a capital letter! I don't know why, but it will error out the image.
