@@ -52,6 +52,9 @@ label start:
     Buzz is a known diabetic, but recently he has been preoccupied with school and responsibilities.
     """
     
+    show normalbuzzsprite:
+        zoom 0.5
+    with moveinleft
     player "Hey Buzz! How’s it going? Are you ready for CS 2200 to steamroll us again?"
     
     buzz "Ugh. Don't even {b}mention{/b} it. I didn’t get much sleep grinding the homework, but at least I still managed to go work out this morning!"
@@ -65,6 +68,9 @@ label start:
     with Dissolve(.5)
     pause 0.5
     scene ferst
+    pause 1.0
+    show tiredbuzzsprite:
+        zoom 0.40
     ### with Dissolve(.5)
 
     """
@@ -90,7 +96,7 @@ label start:
         player "I’m telling you, there’s no way we’ll be able to finish it."
 
         """
-        Buzz stops, staring blankly and breathing h eavily, looking a little queasy.
+        Buzz stops, staring blankly and breathing heavily, looking a little queasy.
         """
 
         #jump choice1_done
@@ -126,6 +132,9 @@ label start:
         with Dissolve(.5)
         pause 0.5
         scene outclass
+        pause 1.0
+        show nauseousbuzzsprite:
+            zoom 0.40
 
         $ menu_flag = False
 

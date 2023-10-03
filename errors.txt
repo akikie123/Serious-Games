@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Script2.rpy", line 4: Line is indented, but the preceding with statement statement does not expect a block. Please check this line's indentation.
-    pause 0.5
+File "game/script.rpy", line 57: expected 'comma or end of line' not found.
+    with moveinleft
     ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Apr 24 11:15:25 2023
+Mon Oct  2 20:38:47 2023
