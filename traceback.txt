@@ -1,28 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 57, in script
-    with moveinleft (1.5)
-TypeError: 'MoveInterpolate' object is not callable
+  File "game/Short-Scripts.rpy", line 340, in script
+    jump main_menu
+ScriptError: could not find label 'main_menu'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 57, in script
-    with moveinleft (1.5)
-  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1658, in execute
-    renpy.exports.with_statement(trans, paired=paired)
-  File "D:\renpy-8.0.3-sdk\renpy\exports.py", line 1657, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 2798, in do_with
-    return self.interact(trans_pause=True,
-  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 3752, in interact_core
-    trans = self.ongoing_transition[None](
-TypeError: 'MoveInterpolate' object is not callable
+  File "game/Short-Scripts.rpy", line 340, in script
+    jump main_menu
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'main_menu'.
 
 Windows-10-10.0.22000 AMD64
 Ren'Py 8.0.3.22090809
 Serious Games 1.8
-Mon Oct  2 20:42:18 2023
+Sun Dec  3 18:31:03 2023

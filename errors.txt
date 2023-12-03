@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 57: expected 'comma or end of line' not found.
-    with moveinleft
-    ^
+File "game/Short-Scripts.rpy", line 16: end of line expected.
+    elif scenario_numbers[random_num] == "1"::
+                                             ^
+
+File "game/Short-Scripts.rpy", line 18: expected statement.
+    elif scenario_numbers[random_num] == "2"::
+                         ^
+
+File "game/Short-Scripts.rpy", line 20: expected statement.
+    elif scenario_numbers[random_num] == "3"::
+                         ^
+
+File "game/Short-Scripts.rpy", line 22: expected statement.
+    elif scenario_numbers[random_num] == "4"::
+                         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Oct  2 20:38:47 2023
+Sun Dec  3 18:23:46 2023

@@ -29,9 +29,9 @@ label start:
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-    $playerName = renpy.input("What is your name?", length = 15)
-    $playerName = playerName.strip()
-    $if not playerName: playerName = "Techie"
+    $ playerName = renpy.input("What is your name?", length = 15)
+    $ playerName = playerName.strip()
+    $ if not playerName: playerName = "Techie"
     # These display lines of dialogue.
 
     menu:
@@ -40,6 +40,11 @@ label start:
 
         "Begin scenario 2":
             jump scenario2
+
+        "Begin Short Scripts":
+            jump rapid_fire
+
+    
 
     label scenario1:
 
