@@ -6,42 +6,52 @@
 ### Dorm couch - Scenario 5
 
 label rapid_fire:
-    define scenario_numbers = ["0", "1", "2", "3", "4"]
-    define maxIndex = 4
-    define visited = []
-    $ random_num = renpy.random.randint(0,maxIndex)
-    $ num_string = str(random_num)
-    if scenario_numbers[random_num] == "0":
+    ###define scenario_numbers = ["0", "1", "2", "3", "4"]
+    ###define maxIterations = 4
+    $ random_scene = renpy.random.choice(scenario_numbers)
+    ### $ num_string = str(random_num)
+    if random_scene == "0":
+        $ scenario_numbers.remove(random_scene)
         jump ss0
-    elif scenario_numbers[random_num] == "1":
+    elif random_scene == "1":
+        $ scenario_numbers.remove(random_scene)
         jump ss1
-    elif scenario_numbers[random_num] == "2":
+    elif random_scene == "2":
+        $ scenario_numbers.remove(random_scene)
         jump ss2
-    elif scenario_numbers[random_num] == "3":
+    elif random_scene == "3":
+        $ scenario_numbers.remove(random_scene)
         jump ss3
-    elif scenario_numbers[random_num] == "4":
+    elif random_scene == "4":
+        $ scenario_numbers.remove(random_scene)
         jump ss4
 
 label next_scenario:
-    $ num_string = str(random_num)
-    $ scenario_numbers = [item for item in scenario_numbers if item != num_string]
-    $ maxIndex -= 1
-    if maxIndex == 0:
-        jump last_one
-    elif maxIndex == -1:
+    ### $ num_string = str(random_num)
+    ### $ scenario_numbers = [item for item in scenario_numbers if item != num_string]
+    $ maxIterations -= 1
+    ### if maxIndex == 0:
+    ### jump last_one
+    if maxIterations == -1:
         jump complete
-    $ scenario_numbers = [item for item in scenario_numbers if item != num_string]
-    $ random_num = renpy.random.randint(0,maxIndex)
-    $ num_string = str(random_num)
-    if scenario_numbers[random_num] == "0":
+    ### $ scenario_numbers = [item for item in scenario_numbers if item != num_string]
+    ### $ random_num = renpy.random.randint(0,maxIndex)
+    #### $ num_string = str(random_num)
+    $ random_scene = renpy.random.choice(scenario_numbers)
+    if random_scene == "0":
+        $ scenario_numbers.remove(random_scene)
         jump ss0
-    elif scenario_numbers[random_num] == "1":
+    elif random_scene == "1":
+        $ scenario_numbers.remove(random_scene)
         jump ss1
-    elif scenario_numbers[random_num] == "2":
+    elif random_scene == "2":
+        $ scenario_numbers.remove(random_scene)
         jump ss2
-    elif scenario_numbers[random_num] == "3":
+    elif random_scene == "3":
+        $ scenario_numbers.remove(random_scene)
         jump ss3
-    elif scenario_numbers[random_num] == "4":
+    elif random_scene == "4":
+        $ scenario_numbers.remove(random_scene)
         jump ss4
 
 label last_one:
@@ -59,10 +69,10 @@ label last_one:
 label ss0:
     with Dissolve(.5)
     pause 0.5
-    scene lobby
+    scene ss1
     pause 1.0
     show nauseousbuzzsprite:
-        zoom 0.40
+        zoom 0.5
     """
     Our dear Buzz here has diabetes! He was only quite recently diagnosed with diabetes and has been trying his best to keep up with his treatment. 
     """
@@ -135,7 +145,7 @@ label ss0:
 label ss1:
     with Dissolve(.5)
     pause 0.5
-    scene outclass
+    scene ss2
     pause 1.0
     show normalbuzzsprite:
         zoom 0.40
@@ -198,10 +208,10 @@ label ss1:
 label ss2:
     with Dissolve(.5)
     pause 0.5
-    scene vending
+    scene ss3a1
     pause 1.0
     show nauseousbuzzsprite:
-        zoom 0.40
+        zoom 0.45
     """ 
     Our dear Buzz here has diabetes! He was only quite recently diagnosed with diabetes, and has been trying his best to keep up with his treatment. 
     """
@@ -224,9 +234,13 @@ label ss2:
 
     menu:
         "You should really eat something":
+            with Dissolve(.5)
+            pause 0.5
+            scene ss3a2
+            pause 1.0
             hide nauseousbuzzsprite
-            show verynauseousbuzzsprite:
-                zoom 0.40
+            show normalbuzzsprite:
+                zoom 0.45
 
             player "I don't care how small it is, you need to eat."
             player "And oh! Buzz, I know your head hurts but check in with your doctor."
@@ -253,13 +267,18 @@ label ss2:
                     jump next_scenario
 
         "Dang. Oh! I got the cough drops!":
+            with Dissolve(.5)
+            pause 0.5
+            scene ss3a2
+            pause 1.0
+            hide nauseousbuzzsprite
+            show verynauseousbuzzsprite:
+                zoom 0.45
 
             buzz "Thanks! You should probably go before I get you sick as well."
             player "I’ll head out then, I hope you feel better soon!
             Call me if you need anything!"
-            hide nauseousbuzzsprite
-            show normalbuzzsprite:
-                zoom 0.40
+
             """
             By the next day, Buzz is feeling very dizzy and sick. He has a headache as well and asks you to drive him to the hospital.
             Turns out, his insulin levels dropped so low and his blood sugar levels skyrocketed from his illness that the ketones in his blood stream and is further helped by the doctors there.
@@ -277,7 +296,7 @@ label ss2:
 label ss3:
     with Dissolve(.5)
     pause 0.5
-    scene willage_out
+    scene ss4
     pause 1.0
     show normalbuzzsprite:
         zoom 0.40
@@ -356,7 +375,7 @@ label ss3:
 label ss4:
     with Dissolve(.5)
     pause 0.5
-    scene willage_out
+    scene ss5
     pause 1.0
     show tiredbuzzsprite:
         zoom 0.40

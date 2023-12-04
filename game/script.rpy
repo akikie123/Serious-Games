@@ -25,6 +25,8 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
     scene bluesky
+    define scenario_numbers = ["0", "1", "2", "3", "4"]
+    define maxIterations = 4
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
