@@ -55,7 +55,14 @@ label last_one:
         jump ss3
     elif scenario_numbers[0] == "4":
         jump ss4
+
 label ss0:
+    with Dissolve(.5)
+    pause 0.5
+    scene lobby
+    pause 1.0
+    show nauseousbuzzsprite:
+        zoom 0.40
     """
     Our dear Buzz here has diabetes! He was only quite recently diagnosed with diabetes and has been trying his best to keep up with his treatment. 
     """
@@ -76,7 +83,9 @@ label ss0:
     menu:
         "True":
             player "Yeah, if you say so…"
-
+            hide nauseousbuzzsprite
+            show verynauseousbuzzsprite:
+                zoom 0.40
             """
             Buzz’s blood sugar levels dramatically increased overnight and his health continued to worsen because he neglected to take his medicine. 
             It got so bad that Buzz underwent diabetic ketoacidosis later that evening.
@@ -95,6 +104,9 @@ label ss0:
                     jump next_scenario
 
         "False":
+            hide nauseousbuzzsprite
+            show normalbuzzsprite:
+                zoom 0.40
             player "Yes, but your blood sugar levels can fluctuate unpredictably, especcially when you’re sick. Better safe than sorry."
             buzz "Yeah. Yeah."
 
@@ -111,6 +123,7 @@ label ss0:
             Buzz takes his insulin and his blood sugar readings slowly return to their normal range.
             You reminded him in enough time to not risk a potentially fatal situation in the future.
             """
+
             menu:
                 "Play again?":
                     jump ss0
@@ -120,6 +133,12 @@ label ss0:
     return
 
 label ss1:
+    with Dissolve(.5)
+    pause 0.5
+    scene outclass
+    pause 1.0
+    show normalbuzzsprite:
+        zoom 0.40
     """
     Our dear Buzz here has diabetes! He was only quite recently diagnosed with diabetes, and has been trying his best to keep up with his treatment. 
     """
@@ -142,7 +161,9 @@ label ss1:
             buzz "That meal was delicious, thanks for dragging me there I really enjoyed it!"
 
             player "{i}hmm? Buzz smells kinda like fruits? I swear I only saw him eat some small apple tarts. Guess he had more before we left{/i}"
-
+            hide normalbuzzsprite
+            show verynauseousbuzzsprite:
+                zoom 0.40
             """
             The next day, Buzz felt very dizzy and sick. He has a headache as well and decided to go to the hospital. 
             Turns out, he has ketones in his blood due to his low levels of insulin and is further helped by the doctors there.
@@ -175,6 +196,12 @@ label ss1:
     return
 
 label ss2:
+    with Dissolve(.5)
+    pause 0.5
+    scene vending
+    pause 1.0
+    show nauseousbuzzsprite:
+        zoom 0.40
     """ 
     Our dear Buzz here has diabetes! He was only quite recently diagnosed with diabetes, and has been trying his best to keep up with his treatment. 
     """
@@ -197,6 +224,9 @@ label ss2:
 
     menu:
         "You should really eat something":
+            hide nauseousbuzzsprite
+            show verynauseousbuzzsprite:
+                zoom 0.40
 
             player "I don't care how small it is, you need to eat."
             player "And oh! Buzz, I know your head hurts but check in with your doctor."
@@ -223,10 +253,13 @@ label ss2:
                     jump next_scenario
 
         "Dang. Oh! I got the cough drops!":
+
             buzz "Thanks! You should probably go before I get you sick as well."
             player "I’ll head out then, I hope you feel better soon!
             Call me if you need anything!"
-
+            hide nauseousbuzzsprite
+            show normalbuzzsprite:
+                zoom 0.40
             """
             By the next day, Buzz is feeling very dizzy and sick. He has a headache as well and asks you to drive him to the hospital.
             Turns out, his insulin levels dropped so low and his blood sugar levels skyrocketed from his illness that the ketones in his blood stream and is further helped by the doctors there.
@@ -242,6 +275,12 @@ label ss2:
 
     return
 label ss3:
+    with Dissolve(.5)
+    pause 0.5
+    scene willage_out
+    pause 1.0
+    show normalbuzzsprite:
+        zoom 0.40
     """
     Our dear Buzz here has diabetes! He was only quite recently diagnosed with diabetes, and has been trying his best to keep up with his treatment.  """
     """
@@ -268,7 +307,6 @@ label ss3:
             buzz "You sure? I don’t want to bother the doctor with something as trivial as this."
             player "It’s your health, it’s not trivial, but it’s quite honestly something that can be answered with a phone call and you’ll either get a ‘You should be okay ’ or ‘Come in for an appointment’"
             buzz "Yeah, okay." 
-
             """
             Buzz calls the doctor and they set up a time for him to come in for a physical.
             They find that if he kept playing so vigorously his insulin levels would have been hard to maintain without checkups.
@@ -287,7 +325,9 @@ label ss3:
         "False":
             player "It’s just a couple weeks, let me know if you want any pointers in volleyball!"
             buzz "Course! Thank you so much for the help!"
-
+            hide normalbuzzsprite
+            show nauseousbuzzsprite:
+                zoom 0.40
             """
             During the game BUZZ ends up feeling very dizzy at the intramural tournament both because he’s nervous and because his insulin is so low. He’s got muscle aches, and his stomach has been upset for a while.
             """
@@ -314,6 +354,12 @@ label ss3:
     return
 
 label ss4:
+    with Dissolve(.5)
+    pause 0.5
+    scene willage_out
+    pause 1.0
+    show tiredbuzzsprite:
+        zoom 0.40
     """
     Buzz was recently diagnosed with diabetes, and does his best to keep up with his treatment. 
     See how stress may affect Buzz and his condition.

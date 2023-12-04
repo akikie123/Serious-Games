@@ -1,31 +1,56 @@
-Mon Dec  4 01:34:55 2023
-Windows-10-10.0.22000
-Ren'Py 8.0.3.22090809
+Mon Dec  4 02:25:04 2023
+Windows-10-10.0.22621
+Ren'Py 8.1.3.23091805
  
 
-Bootstrap to the start of init.init took 0.05s
-Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.03s
-Loading script took 0.19s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-
-File "game/Short-Scripts.rpy", line 372: expected statement.
-    Congrats! You have finished all of the short scripts! 
-            ^
-DPI scale factor: 1.000000
+Bootstrap to the start of init.init. took 0.03s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.03s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.04s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\jliao\\AppData\\Roaming/RenPy/backups\\SeriousGames':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 2.000000
 nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Interface start took 0.12s
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.24s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.08s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
+primary display bounds: (0, 0, 3072, 1920)
 swap interval: 1 frames
 Fullscreen mode.
-Vendor: "b'Intel'"
-Renderer: b'Intel(R) UHD Graphics 620'
-Version: b'4.6.0 - Build 26.20.100.7323'
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 532.27'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1366, 768) drawable=(1366, 768)
+Screen sizes: virtual=(1920, 1080) physical=(3072, 1920) drawable=(3072, 1920)
 Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
