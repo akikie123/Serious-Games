@@ -60,7 +60,7 @@ label ss0:
     Our dear Buzz here has diabetes! He was only quite recently diagnosed with diabetes and has been trying his best to keep up with his treatment. 
     """
     """
-    Lately, he’s been under the weather and hasn’t been keeping up with his daily routines of checking his blood sugar and taking his insulin.
+    Lately, he’s been under the weather and hasn’t been keeping up with his daily routines of checking his blood sugar and taking his insulin. 
     """
     buzz "Oh that’s right. Ugh, I just want to lay in bed for the rest of the day."
 
@@ -286,17 +286,25 @@ label ss3:
 
         "False":
             player "It’s just a couple weeks, let me know if you want any pointers in volleyball!"
-            buzz "'Course! Thank you so much for the help!"
+            buzz "Course! Thank you so much for the help!"
 
             """
-            During the game BUZZ ends up feeling very dizzy at the intramural tournament both because he’s nervous and because his insulin is so low. He’s got muscle aches, and his stomach has been upset for a while."""
+            During the game BUZZ ends up feeling very dizzy at the intramural tournament both because he’s nervous and because his insulin is so low. He’s got muscle aches, and his stomach has been upset for a while.
+            """
+            
+            """
+            He decides to get checked out later that night after the pain doesn’t stop. Once they take him to the doctors, they realize that his blood sugar is staying at or above 300 mg/dL and decided to instantly treat him by giving him insulin and replacing his fluids.
+            """
+
             """
             He decides to get checked out later that night after the pain doesn’t stop. Once they take him to the doctors, they realize that his blood sugar is staying at or above 300 mg/dL and decided to instantly treat him by giving him insulin and replacing his fluids.
             He is sent to the ER to stay under monitoring for the night.
             """
 
+            """
             Maybe try again...
             """
+            
             menu:
                 "Retry":
                     jump ss1
@@ -306,7 +314,8 @@ label ss3:
     return
 
 label ss4:
-    """Buzz was recently diagnosed with diabetes, and does his best to keep up with his treatment. 
+    """
+    Buzz was recently diagnosed with diabetes, and does his best to keep up with his treatment. 
     See how stress may affect Buzz and his condition.
     """
 
@@ -362,6 +371,8 @@ label ss4:
 label complete:
     """
     Congrats! You have finished all of the short scripts! 
+    """
+    """
     All of these mini scenarios have shown different situations which could result in {i}diabetic ketoacidosis{/i} sometimes called {i}DKA{/i}.
     """
 

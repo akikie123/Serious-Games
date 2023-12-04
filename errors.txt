@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Short-Scripts.rpy", line 16: end of line expected.
-    elif scenario_numbers[random_num] == "1"::
-                                             ^
-
-File "game/Short-Scripts.rpy", line 18: expected statement.
-    elif scenario_numbers[random_num] == "2"::
-                         ^
-
-File "game/Short-Scripts.rpy", line 20: expected statement.
-    elif scenario_numbers[random_num] == "3"::
-                         ^
-
-File "game/Short-Scripts.rpy", line 22: expected statement.
-    elif scenario_numbers[random_num] == "4"::
-                         ^
+File "game/Short-Scripts.rpy", line 372: expected statement.
+    Congrats! You have finished all of the short scripts! 
+            ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Dec  3 18:23:46 2023
+Mon Dec  4 01:34:56 2023
