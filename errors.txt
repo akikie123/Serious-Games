@@ -2,62 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/Short-Scripts.rpy", line 15: expected statement.
-    scenario_numbers.remove(random_scene)
-                                         ^
-
-File "game/Short-Scripts.rpy", line 18: expected statement.
-    scenario_numbers.remove(random_scene)
-                                         ^
-
-File "game/Short-Scripts.rpy", line 21: expected statement.
-    scenario_numbers.remove(random_scene)
-                                         ^
-
-File "game/Short-Scripts.rpy", line 24: expected statement.
-    scenario_numbers.remove(random_scene)
-                                         ^
-
-File "game/Short-Scripts.rpy", line 27: expected statement.
-    scenario_numbers.remove(random_scene)
-                                         ^
-
-File "game/Short-Scripts.rpy", line 43: expected statement.
-    scenario_numbers.remove(random_scene)
-                                         ^
-
-File "game/Short-Scripts.rpy", line 46: expected statement.
-    scenario_numbers.remove(random_scene)
-                                         ^
-
-File "game/Short-Scripts.rpy", line 49: expected statement.
-    scenario_numbers.remove(random_scene)
-                                         ^
-
-File "game/Short-Scripts.rpy", line 52: expected statement.
-    scenario_numbers.remove(random_scene)
-                                         ^
-
-File "game/Short-Scripts.rpy", line 55: expected statement.
-    scenario_numbers.remove(random_scene)
-                                         ^
-
-File "game/Short-Scripts.rpy", line 57: end of line expected.
-(Perhaps you left out a " at the end of the first line.)
-    """
-    label last_one:
-        if scenario_numbers[0] == "0":
-                                     ^
-            jump ss0
-        elif scenario_numbers[0] == "1":
-            jump ss1
-        elif scenario_numbers[0] == "2":
-            jump ss2
-        elif scenario_numbers[0] == "3":
-            jump ss3
-        elif scenario_numbers[0] == "4":
-            jump ss4
-    """
+File "game/Short-Scripts.rpy", line 444: invalid syntax
+    define maxIterations = 4
+            ^
+    
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon Dec  4 17:29:33 2023
+Mon Dec  4 20:27:50 2023

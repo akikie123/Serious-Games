@@ -220,7 +220,7 @@ label ss2:
     """
     player "Hey Buzz, I heard you weren’t doing or eating so well last I checked. Anything I can do?"
 
-    player "Hey, [playerName], thanks for checking in on me. I’m doing as well as I can for someone with such a bad cold. It’s mostly been coughing and chills so far, do you mind grabbing me a bag of the Hall’s cough drops?"
+    buzz "Hey, [playerName], thanks for checking in on me. I’m doing as well as I can for someone with such a bad cold. It’s mostly been coughing and chills so far, do you mind grabbing me a bag of the Hall’s cough drops?"
 
     player "I gotchu, hopefully, you can get to bed and just rest up. I hope you feel better soon! I’ll be back with the cough drops after class."
 
@@ -434,11 +434,21 @@ label ss4:
     return
 
 label complete:
+    $scenario_numbers.append("0")
+    $scenario_numbers.append("1")
+    $scenario_numbers.append("2")
+    $scenario_numbers.append("3")
+    $scenario_numbers.append("4")
+    $maxIterations += 5
     """
     Congrats! You have finished all of the short scripts! 
     """
     """
     All of these mini scenarios have shown different situations which could result in {i}diabetic ketoacidosis{/i} sometimes called {i}DKA{/i}.
     """
+    
+
+
+
 
 return
