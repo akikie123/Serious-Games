@@ -105,7 +105,6 @@ label ss0:
             Maybe try again...
 
             """
-
             menu:
                 "Retry":
                     jump ss0
@@ -132,6 +131,34 @@ label ss0:
             """
             Buzz takes his insulin and his blood sugar readings slowly return to their normal range.
             You reminded him in enough time to not risk a potentially fatal situation in the future.
+            """
+            hide normalbuzzsprite
+            with Dissolve(.5)
+            pause 0.5
+            scene GRAYBG1
+            pause 1.0
+
+            """
+            Answer: FALSE
+            Congrats, you got it right!
+            """
+            """
+            Explanation: Illness can trigger stress responses that increase the cortisol level (a stress hormone) in the body. 
+            """
+            """
+            The sudden fluctuation of cortisol levels can affect how your diabetic friend’s body processes their insulin, 
+            """
+            """
+            leading them to process less insulin and therefore increasing their risk of ketoacidosis. 
+            """
+            """
+            Make sure that your friend is still properly following their insulin treatment care and tell/help them to take it easy to prevent more stress 
+            """
+            """
+            within their body. This helps prevent the negative effects of cortisol.
+            """
+            """
+            Source: https://my.clevelandclinic.org/health/diseases/21945-diabetic-ketoacidosis-dka
             """
 
             menu:
@@ -197,6 +224,39 @@ label ss1:
             """
             Buzz and you end up enjoying a nice evening dinner and go home feeling well fed and well rested!
             """
+            hide normalbuzzsprite
+            with Dissolve(.5)
+            pause 0.5
+            scene GRAYBG2
+            pause 1.0
+
+            """
+            Answer: "Did he make sure to take them before we left?"
+            Congrats! You got it right!
+            """
+            """
+            Explanation: Better safe than sorry! Lend a helping hand to your friend as literary
+             review reveals that many factors could lead to a person forgetting to take their insulin. 
+            """
+            """
+            Reasons include embarrassment, depression, and general lack of attention. 
+            """
+            """
+            However, it is proven that both missed insulin dosages AND mistimed dosages lead to low insulin levels 
+            so watch out for your friend! 
+            """
+            """
+            According to studies, this causes higher blood sugar levels 
+            but also can force their liver to break down fat for energy, causing ketoacidosis. 
+            """
+            """
+            Both effects cause nausea and faintness.
+            """
+            """
+            Source: 
+            Susan Robinson, Rachel S. Newson, Birong Liao, Tessa Kennedy-Martin, and Tadej Battelino. Missed and Mistimed Insulin Doses in People with Diabetes: A Systematic Literature Review. 
+            Diabetes Technology & Therapeutics.Dec 2021.844-856.http://doi.org/10.1089/dia.2021.0164
+            """
             menu:
                 "Play again?":
                     jump ss1
@@ -258,6 +318,25 @@ label ss2:
             """
             """
             Buzz ends up recovering well and goes back to the GT grind!
+            """
+            hide normalbuzzsprite
+            with Dissolve(.5)
+            pause 0.5
+            scene GRAYBG3
+            pause 1.0
+
+            """
+            Answer: "I don't care how small it is, you need to eat."
+            Congrats, you got it right!
+            """
+            """
+            Explanation: These are all common symptoms of Ketoacidosis and can be resolved by general blood sugar management such as eating. 
+            """
+            """
+            Source: Shahid, W., Khan, F., Makda, A., Kumar, V., Memon, S., & Rizwan, A. (2020). Diabetic Ketoacidosis: Clinical Characteristics and Precipitating Factors.
+            """
+            """
+            Cureus, 12(10), e10792. https://doi.org/10.7759/cureus.10792
             """
             menu:
                 "Play Again?":
@@ -334,12 +413,39 @@ label ss3:
             I could have made a really bad mistake there."
             player "Of course! How was the game? It went well?"
             buzz  "It did! I only felt dizzy at the game because of nerves!"
+            hide normalbuzzsprite
+            with Dissolve(.5)
+            pause 0.5
+            scene GRAYBG4
+            pause 1.0
+            """
+            Answer: TRUE
+            Congrats you got it right!
+            Explanation: Moderate exercise has been found to help maintain blood sugar levels. 
+            """
+            """
+            However, excessive exercise can put your Type 1 diabetic friend at risk of hypoglycemia which prevents proper maintenance of blood sugar levels. 
+            """
+            """
+            This is because their body starts reducing the amount of glycogen within their muscles and hepatic system. 
+            """
+            """
+            This can cause their body to intake glucose too quickly and lead to hypoglycemia or hyperglycemia. Additionally, if they have some comorbidities such as macrovascular disease, excessive exercise is not recommended as it can cause further difficulties. 
+            """
+            """
+            Overall, it is recommended for your friend to check with a doctor and see if they are predisposed to any of these effects. 
+            """
+            """
+            Source: Lu, X., Zhao, C. (2020). Exercise and Type 1 Diabetes. In: Xiao, J. (eds) Physical Exercise for Human Health. Advances in Experimental Medicine and Biology, vol 1228. Springer, Singapore. https://doi.org/10.1007/978-981-15-1792-1_7
+            """
             menu:
                 "Play Again?":
                     jump ss1
 
                 "Continue to next":
                     jump next_scenario
+
+
 
         "False":
             player "It’s just a couple weeks, let me know if you want any pointers in volleyball!"
