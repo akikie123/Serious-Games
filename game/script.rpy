@@ -46,6 +46,9 @@ label start:
         "Begin Short Scripts":
             jump rapid_fire
 
+        "Begin Glucagon Scenario":
+            jump glucagon_scenario
+
     
 
     label scenario1:
