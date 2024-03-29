@@ -1,1 +1,0 @@
-# glucagon script S24: maheen + anushya
