@@ -5,6 +5,7 @@
 
 define buzz = Character("Buzz", color=(196, 196, 11, 255))
 define player = Character("[playerName]", color=(222, 34, 213, 255))
+define coach = Character("Coach", color=(255, 255, 255, 255))
 
 
 # The game starts here.
@@ -25,13 +26,15 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
     scene bluesky
+    define scenario_numbers = ["0", "1", "2", "3", "4"]
+    define maxIterations = 4
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
-    $playerName = renpy.input("What is your name?", length = 15)
-    $playerName = playerName.strip()
-    $if not playerName: playerName = "Techie"
+    $ playerName = renpy.input("What is your name?", length = 15)
+    $ playerName = playerName.strip()
+    $ if not playerName: playerName = "Techie"
     # These display lines of dialogue.
 
     menu:
@@ -40,6 +43,14 @@ label start:
 
         "Begin scenario 2":
             jump scenario2
+
+        "Begin Short Scripts":
+            jump rapid_fire
+
+        "Begin Glucagon Scenario":
+            jump glucagon_scenario
+
+    
 
     label scenario1:
 
@@ -52,6 +63,9 @@ label start:
     Buzz is a known diabetic, but recently he has been preoccupied with school and responsibilities.
     """
     
+    show normalbuzzsprite:
+        zoom 0.5
+    with moveinleft
     player "Hey Buzz! How’s it going? Are you ready for CS 2200 to steamroll us again?"
     
     buzz "Ugh. Don't even {b}mention{/b} it. I didn’t get much sleep grinding the homework, but at least I still managed to go work out this morning!"
@@ -65,6 +79,9 @@ label start:
     with Dissolve(.5)
     pause 0.5
     scene ferst
+    pause 1.0
+    show tiredbuzzsprite:
+        zoom 0.40
     ### with Dissolve(.5)
 
     """
@@ -90,7 +107,7 @@ label start:
         player "I’m telling you, there’s no way we’ll be able to finish it."
 
         """
-        Buzz stops, staring blankly and breathing h eavily, looking a little queasy.
+        Buzz stops, staring blankly and breathing heavily, looking a little queasy.
         """
 
         #jump choice1_done
@@ -126,6 +143,9 @@ label start:
         with Dissolve(.5)
         pause 0.5
         scene outclass
+        pause 1.0
+        show nauseousbuzzsprite:
+            zoom 0.40
 
         $ menu_flag = False
 
