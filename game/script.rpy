@@ -5,6 +5,7 @@
 
 define buzz = Character("Buzz", color=(196, 196, 11, 255))
 define player = Character("[playerName]", color=(222, 34, 213, 255))
+define coach = Character("Coach", color=(255, 255, 255, 255))
 
 
 # The game starts here.
