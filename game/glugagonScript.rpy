@@ -20,6 +20,7 @@ buzz "Yea. I don’t know why but I feel a little shakey…"
 
 menu:
     "Probably just nerves! Just shake ‘em out. I get jittery before games too.":
+        jump askingShakey
     "Hm… Maybe check your blood sugar? Just in case ya’ know?":
         jump askingShakey
 
