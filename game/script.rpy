@@ -137,6 +137,19 @@ label start:
     You stand at the vending maching looking at options...
     """
     
+    ## message pops up informing use they can hover over options to see the nutritional values 
+
+    menu:
+
+            "Choose the yogurt drink": # (18g carbs, 10g protein,4g fat)
+                jump thanks
+
+            "Choose the protein bar": # (29g carbs, 20g protein, 11g fat)
+                jump thanks
+
+    label thanks:
+        buzz "Thanks for the snack, I got you next time!"
+        jump early_action
 
 
     label conversation_to_class:
@@ -258,12 +271,13 @@ label start:
 
             #  $ menu_flag = True
                 """
-                Buzz pulls out his CGM (Continuous Glucose Monitor) and notices that it’s way too low! It’s only 93 mg/dL!
+                Buzz pulls out his CGM (Continuous Glucose Monitor) and notices that it’s way too low! It’s under 65 mg/dL!
                 """
  
  
                 "{i}This normally isn't a problem, but after eating breakfast, his average blood sugar should be closer to 140mg/dL{/i}"
-                "{i}This blood sugar level is comparable to that of a non-diabetic person having not eaten for over 5 hours{/i}"
+                "{i}This blood sugar level is comparable to that of a non-diabetic person having not eaten for over 5 hours{/i}" 
+                ## check these numbers with Maheen
 
                 buzz "Oh. That explains... This"
                 "Buzz gestures towards himself"
@@ -279,11 +293,17 @@ label start:
                 scene vending
                 menu:
 
-                    "Choose a pack of hard candy":
+                    "Choose a pack of Jolly Ranchers": # (17g carbs)
                         jump hard_candy
 
-                    "Choose a pack of peanuts":
+                    "Choose a pack of peanuts": # (5g carbs, 14g fat, 7g protein)
                         jump peanuts
+
+                    "Choose a pack of PopTarts": #(70g carb, 9g fat)
+                        jump poptart
+
+                    "Choose a pack of Oreos": #(25g carb, 7g fat, 1g protein)
+                        jump oreo
 
                 label hard_candy:
 
@@ -312,6 +332,36 @@ label start:
                 buzz "uhhhh- Not quite what I needed... but I'll take it"
                 """
                 Buzz munches on a few peanuts before putting his head back down.
+                """
+                jump class_continues
+
+                label poptart: 
+
+                """
+                You come back to class holding a pack of PopTarts.
+                """
+                with Dissolve(.5)
+                pause 0.5
+                scene classroom
+                with Dissolve(.5)
+                buzz "Thanks this is just what I needed!"
+                """
+                Buzz takes a few bites and starts taking lecture notes.
+                """
+                jump vending_machine_ending_screen
+
+                label oreo:
+
+                """
+                You come back to class holding a sleeve of Oreos.
+                """
+                with Dissolve(.5)
+                pause 0.5
+                scene classroom
+                with Dissolve(.5)
+                buzz "Ooo I love oreos, but I'm not sure if these will do the trick."
+                """
+                Buzz munches on a few cookies before putting his head back down.
                 """
                 jump class_continues
 
@@ -431,6 +481,11 @@ label start:
                     return
                    
     #jump vending_machine_ending_screen
+
+    label early_action:
+        "You made sure Buzz's blood sugar stayed in a healthy range, good job!"
+        jump info_end
+
 
     label vending_machine_ending_screen:
         "You got his blood sugar to a normal range with that little sweet rush! Good job!!"
