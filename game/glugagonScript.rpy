@@ -87,16 +87,17 @@ coach "Already on it!"
 {i}Your coach hands over the phone.{/i}
 """
 emergencyOperator "Your coach has informed me that your friend has fainted due to hypoglycemia. Could you tell me his current blood sugar?"
-    """
-    Buzz briefly explained how he checks his blood sugar with a glucometer, but that was a while ago.
-    """
+"""
+Buzz briefly explained how he checks his blood sugar with a glucometer, but that was a while ago.
+"""
 
-    # the player has a choice to check Buzz's blood sugar with or without instructions
-    menu:
-        "I can do it without help!":
-            jump to bloodSugarUnassisted
-        "Can you walk me through how?":
-            jump to bloodSugarAssisted
+# the player has a choice to check Buzz's blood sugar with or without instructions
+menu:
+    "I can do it without help!":
+        jump bloodSugarUnassisted
+
+    "Can you walk me through how?":
+        jump bloodSugarAssisted
 
 label bloodSugarAssisted:
     # TODO: implement assisted blood sugar simulation here...

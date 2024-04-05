@@ -70,7 +70,12 @@ label start:
     player "Hey Buzz! How’s it going? Are you ready for CS 2200 to steamroll us again?"
     
     buzz "Ugh. Don't even {b}mention{/b} it. I didn’t get much sleep grinding the homework, but at least I still managed to go work out this morning!"
-    buzz "Pretty hungry though, maybe I’ll eat again later.."
+    buzz "I'm hungry though, weird since my breakfast was kinda big."
+
+    #player "Maybe grab a snack from the vending machine?"
+    #player "We should head to class though or we are gonna be late!"
+
+    #buzz "Pretty hungry though, maybe I’ll eat again later.."
     
     ###somehow change slides here: the following is the scene swap psuedocode
     with Dissolve(.5)
@@ -83,7 +88,7 @@ label start:
     ### with Dissolve(.5)
 
     """
-    As you walk,you notice Buzz's voice shaking slightly as he talks, but you’re not sure if it’s just because it’s cold outside or not.
+    As you walk, you notice Buzz's voice shaking slightly as he talks, but you’re not sure if it’s just because it’s cold outside or not.
     """
     menu:
 
@@ -105,18 +110,17 @@ label start:
 
     $ menu_flag = False
 
-        buzz "Around 15 minutes before I eat, I always have to check a couple things: my current blood sugar, and the amount of carbs I’m about to eat."
-        buzz "Carbs make everyone’s blood sugar levels rise, s
-        o I have to see how much insulin I need to balance it. Fats and proteins get in the way of this process"\
+    buzz "Around 15 minutes before I eat, I always have to check a couple things: my current blood sugar, and the amount of carbs I’m about to eat."
+    buzz "Carbs make everyone’s blood sugar levels rise, so I have to see how much insulin I need to balance it. Fats and proteins get in the way of this process"
 
-        buzz "The equation can seem pretty complicated, but I promise you'll get the hang of it!"
-        buzz "[((current blood sugar) - (target blood sugar)) / correction factor] + [(number of grams of carbs) / (insulin:carb ratio)]" 
-        ## implement mini game around here to drag just variables 
+    buzz "The equation can seem pretty complicated, but I promise you'll get the hang of it!"
+    buzz "[((current blood sugar) - (target blood sugar)) / correction factor] + [(number of grams of carbs) / (insulin:carb ratio)]" 
+    ## implement mini game around here to drag just variables 
 
-        buzz "Many of these factors are set numbers that are unique just for me: Target blood sugar = 120 mg/dl, Correction factor = 35, and my Insulin to Carb Ratio = 10 (grams / unit of insulin)"
-        ## *given a blank equation fill in these numbers into the correct blanks to get this result:
-        #[(current blood sugar) - 120) / 35] + [(# of grams of carbs / 10]
-            jump vending1
+    buzz "Many of these factors are set numbers that are unique just for me: Target blood sugar = 120 mg/dl, Correction factor = 35, and my Insulin to Carb Ratio = 10 (grams / unit of insulin)"
+    ## *given a blank equation fill in these numbers into the correct blanks to get this result:
+    #[(current blood sugar) - 120) / 35] + [(# of grams of carbs / 10]
+    jump vending1
 
     label vending1:
     
@@ -138,7 +142,7 @@ label start:
     You stand at the vending maching looking at options...
     """
     
-    ## message pops up informing use they can hover over options to see the nutritional values 
+    ## message pops up informing user they can hover over options to see the nutritional values 
 
     menu:
 
@@ -178,26 +182,25 @@ label start:
             "Ask “Are you alright?”":
                 jump buzz_says_something
 
-        label buzz_says_nothing:
+    label buzz_says_nothing:
 
         #  $ menu_flag = True
-            """
-            Buzz continues on like nothing happened.
-            The two of you quickly walk to class.
-            """
-            jump outside_class
+        """
+        Buzz continues on like nothing happened.
+        The two of you quickly walk to class.
+        """
+        jump outside_class2
 
-        label buzz_says_something:
-
+    label buzz_says_something:
         #   $ menu_flag = False
 
-            buzz "Oh yeah, I’m all good. Thanks for asking. Just tired after the workout and weirdly anxious about the project"
+        buzz "Oh yeah, I’m all good. Thanks for asking. Just tired after the workout and weirdly anxious about the project."
 
-            jump outside_class
+        jump outside_class2
 
-        jump outside_class
+        #jump outside_class
 
-    label outside_class:
+    label outside_class2:
         with Dissolve(.5)
         pause 0.5
         scene outclass
@@ -231,7 +234,7 @@ label start:
         label buzz_check_blood:
 
         #  $ menu_flag = True
-            buzz "I don’t actually know. I’m really not feeling great, so I could just be sick. But everything came pretty suddenly. I’ll check it once we’re in class, I don’t want to pull it out my pocket right now."
+            buzz "I don’t actually know. I’m really not feeling great, so I could just be sick. But everything came pretty suddenly. I’ll check it once we’re in class, I don’t want to pull it out of my pocket right now."
             """
             The two of you head inside and settle down in class.
             """
@@ -280,18 +283,20 @@ label start:
                 "{i}This blood sugar level is comparable to that of a non-diabetic person having not eaten for over 5 hours{/i}" 
                 ## check these numbers with Maheen
 
-                buzz "Oh. That explains... This"
-                "Buzz gestures towards himself"
-                buzz "Could you run and grab me a snack?"
+                buzz "Oh. That explains CGM reading, could you run and grab me a snack?"
 
                 player "You got it!"
 
                 """
                 You run to the vending machine
                 """
+                ##dissolve to Demi's screen 
+
                 with Dissolve(.5)
                 pause 0.5
                 scene vending
+
+                ## message pops up informing user they can hover over options to see the nutritional values 
                 menu:
 
                     "Choose a pack of Jolly Ranchers": # (17g carbs)
@@ -370,7 +375,7 @@ label start:
 
             #   $ menu_flag = False
                 """
-                You pay attention to class for sometime, diligently taking notes and noticing that Buzz hasn’t lifted his head from the table in a while. 
+                You pay attention to class for sometime, diligently taking notes and notice that Buzz hasn’t lifted his head from the table in a while. 
                 """
                 menu: 
                     "Poke him to see if he wakes up":
@@ -419,6 +424,10 @@ label start:
                             show verytiredbuzzsprite: 
                                 zoom 0.40             # maybe end delete
                             with Dissolve(.5)
+
+                            ##dissolve to Demi's screen 
+                            ##hover actions
+
                             """
                             Insulin won't help now, it will only lower Buzz's blood sugar levels even more!
                             """
@@ -574,7 +583,7 @@ label start:
 
         Some of the symptoms include shakiness, headaches, blurred vision, confusion, nervousness, and many more.
 
-        At a non-professional level, some of the best treatment for someone that is suffering from hypoglycemia, especially a diabetic, is to give them something that is high in sugar content. This could be candy, soda, juice.
+        At a non-professional level, some of the best treatment for someone that is suffering from hypoglycemia, especially a diabetic, is to give them something that is high in sugar content or carbohydrates. This could be candy, soda, juice.
         Especially things high in natural sugars such a raisins or other fruits.
 
         Once the person loses consciousness or there appear to be other abnormal or worrying symptoms, please call a professional or take them to the hospital.
