@@ -398,7 +398,7 @@ label start:
 
                     label you_check_CGM:
                         """
-                        You pull out his CGM from his pocket. It’s below 90dl/mg! That’s not good, what do you do now?!                        
+                        You pull out his CGM from his pocket. It’s below 50 dl/mg! That’s not good, what do you do now?!                        
                         """
                         menu:
                             "Run to the Vending Machine":
@@ -413,22 +413,34 @@ label start:
                             """
                             with Dissolve(.5)
                             pause 0.5
-                            scene vending
+                            scene vending             #maybe start delete at the next line to zoom
+                            pause 1.0             
+                            show verytiredbuzzsprite: 
+                                zoom 0.40             # maybe end delete
                             with Dissolve(.5)
+                            """
+                            Insulin won't help now, it will only lower Buzz's blood sugar levels even more!
+                            """
                             menu:
-                                "Choose sweet fruit juice":
-                                    jump sweet_fruit_juice
+                                "Choose Mountain Dew": ## (62g carbs)
+                                    jump mountain_dew 
 
-                                "Choose beef jerky":
+                                "Choose beef jerky": ## (4g carbs, 1g fat, 11g protein)
                                     jump beef_jerky
 
-                            label sweet_fruit_juice:
+                                "Choose Diet Coke": ## (0g of fat protein and carbs)
+                                    jump diet_coke 
+
+                                "Choose a Snickers bar": ## (35g carbs, 14g fat, 4g protein)
+                                    jump snickers
+                                
+                            label mountain_dew:
                                 with Dissolve(.5)
                                 pause 0.5
                                 scene classroom
                                 with Dissolve(.5)
                                 """
-                                You come back to class holding a Minute Maid, and shake Buzz a little more to wake him up.
+                                You come back to class holding a Mountain Dew, and shake Buzz a little more to wake him up.
                                 """
             
                                 player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple sips for now to get the blood sugar up?"
@@ -450,9 +462,39 @@ label start:
 
                                 buzz "Hmm? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
                                 
-                                buzz "Wait a second, beef jerky? I don’t know how much this will help me."
+                                buzz "Wait a second, beef jerky? I don’t know how much this will help me. The amount of protein in this will make my blood sugar levels rise more slowly."
 
                                 jump found_unconcious_way_later
+
+                            label diet_coke:
+                                with Dissolve(.5)
+                                pause 0.5
+                                scene classroom
+                                with Dissolve(.5)
+                                """ 
+                                You come back to class holding a bottle of Diet Coke.
+                                """
+                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple bites for now to get the blood sugar up?"
+
+                                Buzz "Um… sure but you know this doesn’t have any sugar in it right…?"
+
+                                jump found_unconcious_way_later
+
+                            label snickers:
+                                with Dissolve(.5)
+                                pause 0.5
+                                scene classroom
+                                with Dissolve(.5)
+
+                                """ 
+                                You come back to class holding a Snickers bar.
+                                """
+                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple bites for now to get the blood sugar up?"
+
+                                Buzz "Ooo yeah I love Snickers, they have a lot of nuts though which are high in protein."
+
+                                jump found_unconcious_way_later
+
 
                 label found_unconcious_way_later:
                     """
