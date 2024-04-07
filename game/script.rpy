@@ -146,10 +146,10 @@ label start:
 
     menu:
 
-            "Choose the yogurt drink": # (18g carbs, 10g protein,4g fat)
+            "Choose the honey bun": # (25 g carbs, 11g fat, 3g protein)
                 jump thanks
 
-            "Choose the protein bar": # (29g carbs, 20g protein, 11g fat)
+            "Choose the protein bar": #  (40 g carbs, 8g fat, 11g protein)
                 jump thanks
 
     label thanks:
@@ -299,10 +299,10 @@ label start:
                 ## message pops up informing user they can hover over options to see the nutritional values 
                 menu:
 
-                    "Choose a pack of Jolly Ranchers": # (17g carbs)
-                        jump hard_candy
+                    "Choose a pack of Nerds Gummy Clusters": # (25g carbs, 0g fat, 1g protein)
+                        jump nerds
 
-                    "Choose a pack of peanuts": # (5g carbs, 14g fat, 7g protein)
+                    "Choose a pack of trail mix": # (14g carbs, 9g fat, 3g protein)
                         jump peanuts
 
                     "Choose a pack of PopTarts": #(70g carb, 9g fat)
@@ -311,7 +311,7 @@ label start:
                     "Choose a pack of Oreos": #(25g carb, 7g fat, 1g protein)
                         jump oreo
 
-                label hard_candy:
+                label nerds:
 
                 #  $ menu_flag = True
                 with Dissolve(.5)
@@ -319,7 +319,7 @@ label start:
                 scene classroom
                 with Dissolve(.5)
                 """
-                You come back to class holding a bag of Jolly Ranchers.
+                You come back to class holding a bag of Nerds.
                 """
 
                 buzz "Sweet! Pun intended, that’s exactly what I needed! Thank you so much!"
@@ -329,15 +329,15 @@ label start:
                 label peanuts:
 
                 """
-                You come back to class holding a bag of peanuts.
+                You come back to class holding a bag of trail mix.
                 """
                 with Dissolve(.5)
                 pause 0.5
                 scene classroom
                 with Dissolve(.5)
-                buzz "uhhhh- Not quite what I needed... but I'll take it"
+                buzz "uhhhh- Not quite what I needed... but I'll take it. Peanuts are high in protein."
                 """
-                Buzz munches on a few peanuts before putting his head back down.
+                Buzz munches on a few before putting his head back down.
                 """
                 jump class_continues
 
@@ -432,8 +432,8 @@ label start:
                             Insulin won't help now, it will only lower Buzz's blood sugar levels even more!
                             """
                             menu:
-                                "Choose Mountain Dew": ## (62g carbs)
-                                    jump mountain_dew 
+                                "Choose Sprite": ## (54g carbs)
+                                    jump sprite 
 
                                 "Choose beef jerky": ## (4g carbs, 1g fat, 11g protein)
                                     jump beef_jerky
@@ -444,13 +444,13 @@ label start:
                                 "Choose a Snickers bar": ## (35g carbs, 14g fat, 4g protein)
                                     jump snickers
                                 
-                            label mountain_dew:
+                            label sprite:
                                 with Dissolve(.5)
                                 pause 0.5
                                 scene classroom
                                 with Dissolve(.5)
                                 """
-                                You come back to class holding a Mountain Dew, and shake Buzz a little more to wake him up.
+                                You come back to class holding a bottle of Sprite, and shake Buzz a little more to wake him up.
                                 """
             
                                 player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple sips for now to get the blood sugar up?"
@@ -536,7 +536,7 @@ label start:
 
     label early_action:
         "You made sure Buzz's blood sugar stayed in a healthy range, good job!"
-        jump info_end
+        jump info_end_early
 
 
     label vending_machine_ending_screen:
@@ -572,6 +572,25 @@ label start:
         """
 
         jump info_end
+
+    label info_end_early: 
+        """
+        You prevented Buzz from entering a hypoglycemic state! The further you would have progressed into the game, the more severe his case would have became, but you stepped in at just the right time!
+
+        Hypoglycemia is a condition in which your blood sugar (glucose) level is lower than the standard range, and it can happen for a large number of reasons. 
+
+        Some causes can include skipping meals, increased exercise levels, and drinking alcohol.
+
+        Some of the symptoms include shakiness, headaches, blurred vision, confusion, nervousness, and many more.
+
+        At a non-professional level, some of the best treatment for someone that is suffering from hypoglycemia, especially a diabetic, is to give them something that is high in sugar content or carbohydrates. This could be candy, soda, juice.
+        Especially things high in natural sugars such a raisins or other fruits.
+
+        Once the person loses consciousness or there appear to be other abnormal or worrying symptoms, please call a professional or take them to the hospital.
+
+        (Please note that we are not medical professionals)
+        """
+        return
         
     label info_end:
         """
