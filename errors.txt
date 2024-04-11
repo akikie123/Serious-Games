@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label outside_class is defined twice, at File "game/script.rpy", line 102:
-    label outside_class:
-and File "game/script.rpy", line 203:
-    label outside_class:
-
+File "game/script.rpy", line 142: 'mage' is not a keyword argument or valid child of the screen statement.
+    mage Solid("#cbac20")
+        ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Fri Apr  5 12:24:31 2024
+Wed Apr 10 23:44:36 2024

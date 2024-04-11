@@ -21,6 +21,7 @@ label splashscreen:
     with Pause(1)
 
     return
+
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
@@ -113,36 +114,61 @@ label start:
     buzz "Around 15 minutes before I eat, I always have to check a couple things: my current blood sugar, and the amount of carbs I’m about to eat."
     buzz "Carbs make everyone’s blood sugar levels rise, so I have to see how much insulin I need to balance it. Fats and proteins get in the way of this process"
 
+
+    #comment out from here down
     buzz "The equation can seem pretty complicated, but I promise you'll get the hang of it!"
-    buzz "[((current blood sugar) - (target blood sugar)) / correction factor] + [(number of grams of carbs) / (insulin:carb ratio)]" 
+    buzz "(((current blood sugar) - (target blood sugar)) / correction factor) + ((number of grams of carbs) / (insulin:carb ratio))"
+
     ## implement mini game around here to drag just variables 
 
     buzz "Many of these factors are set numbers that are unique just for me: Target blood sugar = 120 mg/dl, Correction factor = 35, and my Insulin to Carb Ratio = 10 (grams / unit of insulin)"
     ## *given a blank equation fill in these numbers into the correct blanks to get this result:
     #[(current blood sugar) - 120) / 35] + [(# of grams of carbs / 10]
-    jump vending1
+    jump vending1 
 
     label vending1:
-    
+        with Dissolve(.5)
+        pause 0.5
+        scene vending
+        pause 1.0
+        show normalbuzzsprite:
+            zoom 0.40   
+
+        ##start of vending machine 1 scenario where Buzz's blood sugar is normal
+
+        buzz "Okay so my current blood sugar is reading 120mg/dl, perfect! I have to go to the bathroom real quick, do you mind getting a snack for me?"
+        player "Of course!"
+
+        """ 
+        You stand at the vending maching looking at options...
+        """
+        """
+        Hover over the highlighted options to see their nutritional information!
+        """
+
+        jump vendingHover1
+
+        screen hover1:
+            image Solid("#cbac20")
+                imagebutton:
+                xanchor 0.5 
+                yanchor 0.5 
+                xpos 0.5 
+                ypos 0.28 
+                border True 
+                bordertext "#76ff31"
+                idle "food_VM.png"
+                hover "honeybun.png"
+
+    label vendingHover1:
+        call hover1
+        jump choices1
+
+    label choices1:
     with Dissolve(.5)
     pause 0.5
     scene vending
     pause 1.0
-    show normalbuzzsprite:
-        zoom 0.40   
-
-    ##start of vending machine 1 scenario where Buzz's blood sugar is normal
-
-    buzz "Okay so my current blood sugar is reading 120mg/dl, perfect! I have to go to the bathroom real quick, do you mind getting a snack for me?"
-    player "Of course!"
-
-    ##dissolve to Demi's screen 
-
-    """ 
-    You stand at the vending maching looking at options...
-    """
-    
-    ## message pops up informing user they can hover over options to see the nutritional values 
 
     menu:
 
@@ -153,6 +179,13 @@ label start:
                 jump thanks
 
     label thanks:
+        with Dissolve(.5)
+        pause 0.5
+        scene outclass
+        pause 1.0
+        show normalbuzzsprite:
+            zoom 0.40
+
         buzz "Thanks for the snack, I got you next time!"
         jump early_action
 
