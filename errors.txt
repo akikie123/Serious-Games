@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label outside_class is defined twice, at File "game/script.rpy", line 102:
-    label outside_class:
-and File "game/script.rpy", line 203:
-    label outside_class:
-
+File "game/script.rpy", line 180: end of line expected.
+    show image "button_VM_action.png" pos [0.5, 0.28]
+                                      ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Fri Apr  5 12:24:31 2024
+Sat Apr 13 18:41:20 2024
