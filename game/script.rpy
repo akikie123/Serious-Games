@@ -151,22 +151,36 @@ label start:
 
     screen hover1():
         add "vending"
+        text "Press enter to choose a snack for Buzz!" at right
+
         imagebutton:
             xanchor 0.5 
             yanchor 0.5 
             xpos 0.5
             ypos 0.28
-            auto "button_VM_%s.png" action [ToggleScreen("hover1"), Jump("honeybun")]
-
-
+            auto "honeybun_%s.png" action [Jump("honeybun")]
+        imagebutton:
+            xanchor 0.5 
+            yanchor 0.5 
+            xpos 0.25
+            ypos 0.28
+            auto "protein_%s.png" action [Jump("protein")] ## ToggleScreen("hover1"), 
+    
     label vendingHover1:
         call screen hover1
-        jump choices1
     
     label honeybun:
-        show image "button_VM_action.png" at top
+        hide normalbuzzsprite
+        show image "honeybun_action.png" at top
         """
         Click on the {b}Honey Bun's{/b} nutritional facts to return to the vending machine
+        """
+        jump vendingHover1
+
+    label protein:
+        show image "protein_action.png" at top
+        """
+        Click on the {b}Protein Bar's{/b} nutritional facts to return to the vending machine
         """
         jump vendingHover1
     
