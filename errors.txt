@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 142: 'mage' is not a keyword argument or valid child of the screen statement.
-    mage Solid("#cbac20")
-        ^
+File "game/script.rpy", line 180: end of line expected.
+    show image "button_VM_action.png" pos [0.5, 0.28]
+                                      ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Wed Apr 10 23:44:36 2024
+Sat Apr 13 18:41:20 2024

@@ -143,27 +143,33 @@ label start:
         You stand at the vending maching looking at options...
         """
         """
-        Hover over the highlighted options to see their nutritional information!
+        Click on the highlighted options to see their nutritional information!
         """
 
         jump vendingHover1
+        #bordertext "#76ff31"
 
-        screen hover1:
-            image Solid("#cbac20")
-                imagebutton:
-                xanchor 0.5 
-                yanchor 0.5 
-                xpos 0.5 
-                ypos 0.28 
-                border True 
-                bordertext "#76ff31"
-                idle "food_VM.png"
-                hover "honeybun.png"
+    screen hover1():
+        add "vending"
+        imagebutton:
+            xanchor 0.5 
+            yanchor 0.5 
+            xpos 0.5
+            ypos 0.28
+            auto "button_VM_%s.png" action [ToggleScreen("hover1"), Jump("honeybun")]
+
 
     label vendingHover1:
-        call hover1
+        call screen hover1
         jump choices1
-
+    
+    label honeybun:
+        show image "button_VM_action.png" at top
+        """
+        Click on the {b}Honey Bun's{/b} nutritional facts to return to the vending machine
+        """
+        jump vendingHover1
+    
     label choices1:
     with Dissolve(.5)
     pause 0.5
@@ -171,12 +177,12 @@ label start:
     pause 1.0
 
     menu:
+        "Choose the honey bun": # (25 g carbs, 11g fat, 3g protein)
+            jump thanks
 
-            "Choose the honey bun": # (25 g carbs, 11g fat, 3g protein)
-                jump thanks
-
-            "Choose the protein bar": #  (40 g carbs, 8g fat, 11g protein)
-                jump thanks
+        "Choose the protein bar": #  (40 g carbs, 8g fat, 11g protein)
+            jump thanks
+        
 
     label thanks:
         with Dissolve(.5)
@@ -324,12 +330,18 @@ label start:
                 You run to the vending machine
                 """
                 ##dissolve to Demi's screen 
+                ## message pops up informing user they can hover over options to see the nutritional values 
 
                 with Dissolve(.5)
                 pause 0.5
-                scene vending
+                scene vending 
 
-                ## message pops up informing user they can hover over options to see the nutritional values 
+                label choices2:
+                with Dissolve(.5)
+                pause 0.5
+                scene vending
+                pause 1.0
+
                 menu:
 
                     "Choose a pack of Nerds Gummy Clusters": # (25g carbs, 0g fat, 1g protein)
@@ -464,6 +476,13 @@ label start:
                             """
                             Insulin won't help now, it will only lower Buzz's blood sugar levels even more!
                             """
+                            
+                            label choices3:
+                            with Dissolve(.5)
+                            pause 0.5
+                            scene vending
+                            pause 1.0
+
                             menu:
                                 "Choose Sprite": ## (54g carbs)
                                     jump sprite 

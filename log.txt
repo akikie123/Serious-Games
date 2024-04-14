@@ -1,65 +1,13 @@
-2024-04-11 03:40:58 UTC
+2024-04-14 03:15:53 UTC
 macOS-14.4-arm64-arm-64bit
 Ren'Py 8.2.0.24012702
 
-Early init took 0.05s
+Early init took 0.04s
 Loading error handling took 0.03s
-Loading script took 0.24s
+Loading script took 0.16s
 Loading save slot metadata took 0.04s
 Loading persistent took 0.00s
-
-The label start is defined twice, at File "game/script.rpy", line 24:
-label start:
-and File "game/script.rpy", line 152:
-    label start:      
-
-DPI scale factor: 1.000000
-Interface start took 0.35s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 217.51s
-Loading error handling took 0.02s
-Loading script took 0.10s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-
-File "game/script.rpy", line 142: 'mage' is not a keyword argument or valid child of the screen statement.
-    mage Solid("#cbac20")
-        ^
-DPI scale factor: 1.000000
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 230.24s
-Loading error handling took 0.02s
-Loading script took 0.11s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
+Running init code took 0.04s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
@@ -77,11 +25,11 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.05s
+Prepare screens took 0.04s
 Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
+Save bytecode. took 0.03s
 Running _start took 0.00s
-Interface start took 0.10s
+Interface start took 1.52s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -95,201 +43,3 @@ Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
 Maximum texture size: 4096x4096
 Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 160, in script call
-    call hover1
-  File "/Users/lily/Downloads/renpy-8.2.0-sdk/renpy/ast.py", line 1416, in execute
-    rv = renpy.game.context().call(label, return_site=self.next.name)
-  File "game/script.rpy", line 160, in script call
-    call hover1
-  File "/Users/lily/Downloads/renpy-8.2.0-sdk/renpy/script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'hover1'.
-
-While running game code:
-  File "game/script.rpy", line 160, in script call
-    call hover1
-  File "game/script.rpy", line 160, in script call
-    call hover1
-ScriptError: could not find label 'hover1'.
-Resetting cache.
-Early init took 414.91s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/lily/Library/RenPy/backups/Serious-Games':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 162, in script call
-    call hover1
-  File "/Users/lily/Downloads/renpy-8.2.0-sdk/renpy/ast.py", line 1416, in execute
-    rv = renpy.game.context().call(label, return_site=self.next.name)
-  File "game/script.rpy", line 162, in script call
-    call hover1
-  File "/Users/lily/Downloads/renpy-8.2.0-sdk/renpy/script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'hover1'.
-
-While running game code:
-  File "game/script.rpy", line 162, in script call
-    call hover1
-  File "game/script.rpy", line 162, in script call
-    call hover1
-ScriptError: could not find label 'hover1'.
-Resetting cache.
-Early init took 438.40s
-Loading error handling took 0.02s
-Loading script took 0.11s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/lily/Library/RenPy/backups/Serious-Games':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.10s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 162, in script call
-    call hover1
-  File "/Users/lily/Downloads/renpy-8.2.0-sdk/renpy/ast.py", line 1416, in execute
-    rv = renpy.game.context().call(label, return_site=self.next.name)
-  File "game/script.rpy", line 162, in script call
-    call hover1
-  File "/Users/lily/Downloads/renpy-8.2.0-sdk/renpy/script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'hover1'.
-
-While running game code:
-  File "game/script.rpy", line 162, in script call
-    call hover1
-  File "game/script.rpy", line 162, in script call
-    call hover1
-ScriptError: could not find label 'hover1'.
-Resetting cache.
-Early init took 518.87s
-Loading error handling took 0.02s
-Loading script took 0.12s
-Loading save slot metadata took 0.03s
-Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Backing up script files to '/Users/lily/Library/RenPy/backups/Serious-Games':
-Dump and make backups took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'Apple'"
-Renderer: b'Apple M2'
-Version: b'2.1 Metal - 88'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 162, in script call
-    call hover1
-  File "/Users/lily/Downloads/renpy-8.2.0-sdk/renpy/ast.py", line 1416, in execute
-    rv = renpy.game.context().call(label, return_site=self.next.name)
-  File "game/script.rpy", line 162, in script call
-    call hover1
-  File "/Users/lily/Downloads/renpy-8.2.0-sdk/renpy/script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'hover1'.
-
-While running game code:
-  File "game/script.rpy", line 162, in script call
-    call hover1
-  File "game/script.rpy", line 162, in script call
-    call hover1
-ScriptError: could not find label 'hover1'.
