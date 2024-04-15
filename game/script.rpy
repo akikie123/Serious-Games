@@ -147,12 +147,9 @@ label start:
         """
 
         jump vendingHover1
-        #bordertext "#76ff31"
-
+    
     screen hover1():
         add "vending"
-        text "Press enter to choose a snack for Buzz!" at right
-
         imagebutton:
             xanchor 0.5 
             yanchor 0.5 
@@ -165,6 +162,10 @@ label start:
             xpos 0.25
             ypos 0.28
             auto "protein_%s.png" action [Jump("protein")] ## ToggleScreen("hover1"), 
+        textbutton "Choose a snack for Buzz!":
+            xalign 0.5
+            yalign 0.8
+            action Jump("choices1")
     
     label vendingHover1:
         call screen hover1
@@ -178,6 +179,7 @@ label start:
         jump vendingHover1
 
     label protein:
+        hide normalbuzzsprite
         show image "protein_action.png" at top
         """
         Click on the {b}Protein Bar's{/b} nutritional facts to return to the vending machine
@@ -189,6 +191,7 @@ label start:
     pause 0.5
     scene vending
     pause 1.0
+    hide normalbuzzsprite
 
     menu:
         "Choose the honey bun": # (25 g carbs, 11g fat, 3g protein)

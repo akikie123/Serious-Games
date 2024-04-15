@@ -2,12 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 166: expected a keyword argument or child statement.
-(Perhaps you left out a " at the end of the first line.)
-    """
-    ^
-            Press enter to choose a snack for Buzz!
-            """
+File "game/script.rpy", line 153: 'hide' is not a keyword argument or valid child of the screen statement.
+    hide normalbuzzsprite
+        ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sun Apr 14 10:09:40 2024
+Sun Apr 14 22:21:58 2024

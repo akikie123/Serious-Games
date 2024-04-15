@@ -1,13 +1,13 @@
-2024-04-14 14:21:13 UTC
+2024-04-15 02:23:12 UTC
 macOS-14.4-arm64-arm-64bit
 Ren'Py 8.2.0.24012702
 
 Early init took 0.04s
 Loading error handling took 0.03s
-Loading script took 0.16s
+Loading script took 0.24s
 Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.04s
+Running init code took 0.03s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Reloading save slot metadata took 0.02s
@@ -25,11 +25,11 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.04s
+Prepare screens took 0.05s
 Save pyanalysis. took 0.01s
 Save bytecode. took 0.03s
 Running _start took 0.00s
-Interface start took 0.21s
+Interface start took 0.22s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
