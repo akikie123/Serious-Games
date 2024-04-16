@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 163: 'color' is not a keyword argument or valid child of the textbutton statement.
-    textbutton "Choose a snack for Buzz!" at topright color=(255, 45, 17, 255):
-                                                           ^
+File "game/script.rpy", line 741: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/script.rpy", line 742: expected statement.
+    "Call 911":
+              ^
+
+File "game/script.rpy", line 745: expected statement.
+    "Try to shake him awake":
+                            ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Mon Apr 15 23:01:26 2024
+Tue Apr 16 12:15:47 2024
