@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 180: end of line expected.
-    show image "button_VM_action.png" pos [0.5, 0.28]
-                                      ^
+File "game/glugagonScript.rpy", line 168: expected statement.
+    wait
+        ^
 
-Ren'Py Version: Ren'Py 8.2.0.24012702
-Sat Apr 13 18:41:20 2024
+Ren'Py Version: Ren'Py 8.2.1.24030407
+Sun Apr 14 11:15:17 2024
