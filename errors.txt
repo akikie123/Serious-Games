@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/glugagonScript.rpy", line 168: expected statement.
-    wait
-        ^
+File "game/glugagonScript.rpy", line 222: expected a keyword argument or end of line.
+    at 0.3 0.3
+           ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sun Apr 14 11:15:17 2024
+Tue Apr 16 17:26:49 2024

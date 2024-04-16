@@ -22,7 +22,7 @@ You and Buzz decided to join intramurals volleyball together!
 You two have been practicing together non-stop for the past few weeks in preparation for the first game, which is now!
 """
 """
-{i}*Whistle Noise*{/i}
+{i}*Whistle*{/i}
 """
 player "We're next! Ready Buzz?"
 show tiredbuzzsprite: # change to tired buzz sprite
@@ -151,31 +151,8 @@ label bloodSugarUnassisted:
     scene byVolleyballCourt
     with Dissolve(.5)
 
-    hide phone_talking
-    show hand at left:
-        zoom 0.3
-    show monitor_off at right:
-        zoom 0.3
-
-    screen lancetDrag:
-        draggroup:
-            drag:
-                drag_name "lancetBase"
-                xpos 500
-                ypos 500
-                child "lancet_base.png"
-                draggable True
-                droppable False
-            drag:
-                drag_name "base"
-                xpos 300
-                ypos 300
-                child "base.png"
-                draggable True
-                droppable True
-
-    show lancetDrag
-    pause 60.0
+    # TODO: implement assisted blood sugar simulation here...
+    jump checkedBloodSugar
     
 
 label checkedBloodSugar:
@@ -193,31 +170,84 @@ label checkedBloodSugar:
     You remember an old conversation with Buzz where he told you that he always carried a glucagon kit at the bottom of his bookbag. You immediately grab the kit.
     """
     player "Yes, I have the kit on me right now."
-    emergencyOperator "Okay, would you like step by step instructions for administering the glucagon or are you able to administer it unassisted?"
+    emergencyOperator "Okay, would you be able to administer the glucagon to Buzz?"
 
-    # the player has a choice to administer glucagon with or without instructions
     menu:
-        "I can do it unassisted.":
-            jump glucagonUnassisted
-        "Please walk me through it!":
-            jump glucagonAssisted
+        "I can do it!":
+            jump glucagonSim
 
-label glucagonUnassisted:
+label glucagonSim:
     with Dissolve(.5)
     pause 0.5
     scene byVolleyballCourt
     with Dissolve(.5)
 
-    # TODO: implement unassisted glucagon simulation here...
-    jump buzzWakesUp
+    hide phone_talking
 
-label glucagonAssisted:
-    with Dissolve(.5)
-    pause 0.5
-    scene byVolleyballCourt
-    with Dissolve(.5)
+    show buzz_outerthigh at left:
+        zoom 0.3
 
-    # TODO: implement assisted glucagon simulation here...
+    # HANDLE UNCAPPING SYRINGE...
+    default btn_selected = False
+    screen uncapSyringe:
+        imagebutton:
+            idle "syringe2_capped.png"
+            hover "syringe2_capped.png"
+            selected_idle "syringe3.png"
+            selected_hover "syringe3.png"
+            focus_mask True
+            action ToggleVariable("btn_selected", True)  # Toggle only if btn_selected is False
+            selected (btn_selected)
+
+    show screen uncapSyringe
+
+    while btn_selected == False:
+        "Click the syringe to uncap it."
+
+    # HANDLE DRAGGING SYRINGE ON TOP OF VIAL...
+    # create draggroups with a draggable uncapped syringe and the glucagon vial
+
+    hide screen uncapSyringe
+    default draggedSyringe = False
+    screen dragSyringeToVial:
+        fixed:
+            draggroup:
+                drag:
+                    drag_name "uncappedVial"
+                    xpos 100
+                    ypos 100
+                    child "bottle_front.png"
+                    draggable True
+                    droppable True
+                drag:
+                    drag_name "waterSyringe"
+                    xpos 100
+                    ypos 100
+                    child "syringe3.png"
+                    draggable True
+                    droppable True
+    
+    show screen dragSyringeToVial
+    while draggedSyringe == False:
+        "Drag the syringe to the vial to push the pre-filled syringe liquid into the glucagon vial."
+
+    pause 10000
+
+    # syringe3.png is uncapped syringe
+    # syringe2_capped.png is capped syringe pre-filled with water
+
+    # STEPS:
+    # click the syringe to uncap it (go from syringe2_capped to syringe3)
+    # drag the syringe on top of the vial to fill the vial with the water (go from bottle_front to bottle_water)
+    # turn syringe into syringe2 (empty syringe now)
+    # shake powder until it is mixed -> change image to bottle_mixed.png
+    # drag syringe on top of vial to turn into syringe3 again
+    # drag syringe onto buzz thigh to administer glucagon and exit the activity
+
+
+
+
+    pause 1000
     jump buzzWakesUp
 
 label buzzWakesUp:

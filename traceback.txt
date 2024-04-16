@@ -1,28 +1,68 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/glugagonScript.rpy", line 170, in script
-    if draggable == "lancetBase" & droppable == "base":
-  File "game/glugagonScript.rpy", line 170, in <module>
-    if draggable == "lancetBase" & droppable == "base":
-NameError: name 'draggable' is not defined
+  File "game/glugagonScript.rpy", line 234, in script
+    "Drag the syringe to the vial to push the pre-filled syringe liquid into the glucagon vial."
+  File "game/glugagonScript.rpy", line 212, in execute
+    screen dragSyringeToVial:
+  File "game/glugagonScript.rpy", line 212, in execute
+    screen dragSyringeToVial:
+  File "game/glugagonScript.rpy", line 213, in execute
+    fixed:
+  File "game/glugagonScript.rpy", line 214, in execute
+    draggroup:
+TypeError: 'float' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/glugagonScript.rpy", line 170, in script
-    if draggable == "lancetBase" & droppable == "base":
-  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
-    if renpy.python.py_eval(condition):
-  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/glugagonScript.rpy", line 170, in <module>
-    if draggable == "lancetBase" & droppable == "base":
-NameError: name 'draggable' is not defined
+  File "game/glugagonScript.rpy", line 234, in script
+    "Drag the syringe to the vial to push the pre-filled syringe liquid into the glucagon vial."
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 2557, in execute
+    Say.execute(self)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/exports.py", line 1493, in say
+    who(what, *args, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/character.py", line 1394, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/character.py", line 1045, in do_display
+    display_say(who,
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/character.py", line 741, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 2687, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/screen.py", line 480, in visit_all
+    callback(self)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 2687, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/screen.py", line 491, in per_interact
+    self.update()
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/glugagonScript.rpy", line 212, in execute
+    screen dragSyringeToVial:
+  File "game/glugagonScript.rpy", line 212, in execute
+    screen dragSyringeToVial:
+  File "game/glugagonScript.rpy", line 213, in execute
+    fixed:
+  File "game/glugagonScript.rpy", line 214, in execute
+    draggroup:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/sl2/slast.py", line 1231, in execute
+    d = transform(d)
+TypeError: 'float' object is not callable
 
 macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.2.1.24030407
 Serious Games 1.8
-Sun Apr 14 11:14:50 2024
+Tue Apr 16 17:28:09 2024
