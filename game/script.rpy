@@ -339,6 +339,7 @@ label start:
                 ## check these numbers with Maheen
 
                 buzz "Oh. That explains CGM reading, could you run and grab me a snack?"
+                buzz "Carbs make everyone’s blood sugar levels rise, but fats and proteins get in the way of this process"
 
                 player "You got it!"
 
@@ -350,27 +351,98 @@ label start:
 
                 with Dissolve(.5)
                 pause 0.5
-                scene vending 
-
-                label choices2:
-                with Dissolve(.5)
-                pause 0.5
                 scene vending
-                pause 1.0
 
-                menu:
+                screen hover2():
+                    add "background2"
+                    imagebutton:
+                        xanchor 0.5 
+                        yanchor 0.5 
+                        xpos 0.45
+                        ypos 0.41
+                        auto "nerds_%s.png" action [Jump("nerdsHover")]
+                    imagebutton:
+                        xanchor 0.5 
+                        yanchor 0.5 
+                        xpos 0.39
+                        ypos 0.50
+                        auto "peanuts_%s.png" action [Jump("peanutsHover")]
+                    imagebutton:
+                        xanchor 0.5 
+                        yanchor 0.5
+                        xpos 0.41
+                        ypos 0.64
+                        auto "poptart_%s.png" action [Jump("poptartHover")]
+                    imagebutton:
+                        xanchor 0.5 
+                        yanchor 0.5 
+                        xpos 0.36
+                        ypos 0.50
+                        auto "oreo_%s.png" action [Jump("oreoHover")]
+                    textbutton "Choose a snack for Buzz!" at topright:
+                        xalign 0.5
+                        yalign 0.8
+                        action Jump("choices2")
+    
+    label vendingHover2:
+        hide image "nerds_action.png"
+        hide image "peanuts_action.png"
+        hide image "poptart_action.png"
+        hide image "oreo_action.png"
+        hide normalbuzzsprite
+        call screen hover2
+    
+    label nerdsHover:
+        hide normalbuzzsprite
+        show image "nerds_action.png" at top
+        """
+        Click on the {b}Nerds's{/b} nutritional facts to return to the vending machine. When you return, you can click the button on the top right of the screen to pick a snack for Buzz!
+        """
+        jump vendingHover2
 
-                    "Choose a pack of Nerds Gummy Clusters": # (25g carbs, 0g fat, 1g protein)
-                        jump nerds
+    label peanutsHover:
+        show image "peanuts_action.png" at top
+        """
+        Click on the {b}Trail Mix's{/b} nutritional facts to return to the vending machine. When you return, you can click the button on the top right of the screen to pick a snack for Buzz!
+        """
+        jump vendingHover2
 
-                    "Choose a pack of trail mix": # (14g carbs, 9g fat, 3g protein)
-                        jump peanuts
+    label poptartHover:
+        hide normalbuzzsprite
+        show image "poptart_action.png" at top
+        """
+        Click on the {b}Pop-Tart's{/b} nutritional facts to return to the vending machine. When you return, you can click the button on the top right of the screen to pick a snack for Buzz!
+        """
+        jump vendingHover2
 
-                    "Choose a pack of PopTarts": #(70g carb, 9g fat)
-                        jump poptart
+    label oreoHover:
+        show image "oreo_action.png" at top
+        """
+        Click on the {b}Oreo's{/b} nutritional facts to return to the vending machine. When you return, you can click the button on the top right of the screen to pick a snack for Buzz!
+        """
+        jump vendingHover2
 
-                    "Choose a pack of Oreos": #(25g carb, 7g fat, 1g protein)
-                        jump oreo
+    label choices2:
+        with Dissolve(.5)
+        hide image "nerds_action.png"
+        hide image "peanuts_action.png"
+        hide image "poptart_action.png"
+        hide image "oreo_action.png"
+        scene vending
+
+        menu:
+
+            "Choose a pack of Nerds Gummy Clusters": # (25g carbs, 0g fat, 1g protein)
+                jump nerds
+
+            "Choose a pack of trail mix": # (14g carbs, 9g fat, 3g protein)
+                jump peanuts
+
+            "Choose a pack of PopTarts": #(70g carb, 9g fat)
+                jump poptart
+
+            "Choose a pack of Oreos": #(25g carb, 7g fat, 1g protein)
+                jump oreo
 
                 label nerds:
 
@@ -432,7 +504,7 @@ label start:
                 """
                 jump class_continues
 
-            label class_continues:
+                label class_continues:
 
             #   $ menu_flag = False
                 """
@@ -486,119 +558,194 @@ label start:
                                 zoom 0.40             # maybe end delete
                             with Dissolve(.5)
 
-                            ##dissolve to Demi's screen 
-                            ##hover actions
+                            
 
                             """
                             Insulin won't help now, it will only lower Buzz's blood sugar levels even more!
+                            Find the snack or drink with the most sugars!
                             """
-                            
-                            label choices3:
                             with Dissolve(.5)
                             pause 0.5
                             scene vending
-                            pause 1.0
 
-                            menu:
-                                "Choose Sprite": ## (54g carbs)
-                                    jump sprite 
+                screen hover3():
+                    add "background2"
+                    imagebutton:
+                        xanchor 0.5 
+                        yanchor 0.5 
+                        xpos 0.79
+                        ypos 0.56
+                        auto "sprite_%s.png" action [Jump("spriteHover")]
+                    imagebutton:
+                        xanchor 0.5 
+                        yanchor 0.5 
+                        xpos 0.34
+                        ypos 0.41
+                        auto "beef_%s.png" action [Jump("beefHover")]
+                    imagebutton:
+                        xanchor 0.5 
+                        yanchor 0.5
+                        xpos 0.79
+                        ypos 0.48
+                        auto "coke_%s.png" action [Jump("cokeHover")]
+                    imagebutton:
+                        xanchor 0.5 
+                        yanchor 0.5 
+                        xpos 0.25
+                        ypos 0.50
+                        auto "snickers_%s.png" action [Jump("snickersHover")]
+                    textbutton "Choose a snack for Buzz!" at topright:
+                        xalign 0.5
+                        yalign 0.8
+                        action Jump("choices3")
+    
+    label vendingHover3:
+        hide image "sprite_action.png"
+        hide image "beef_action.png"
+        hide image "coke_action.png"
+        hide image "snickers_action.png"
+        hide normalbuzzsprite
+        call screen hover3
+    
+    label spriteHover:
+        hide normalbuzzsprite
+        show image "sprite_action.png" at top
+        """
+        Click on the {b}Sprite's{/b} nutritional facts to return to the vending machine. When you return, you can click the button on the top right of the screen to pick a snack for Buzz!
+        """
+        jump vendingHover3
 
-                                "Choose beef jerky": ## (4g carbs, 1g fat, 11g protein)
-                                    jump beef_jerky
+    label beefHover:
+        show image "beef_action.png" at top
+        """
+        Click on the {b}Beef Jerky's{/b} nutritional facts to return to the vending machine. When you return, you can click the button on the top right of the screen to pick a snack for Buzz!
+        """
+        jump vendingHover3
 
-                                "Choose Diet Coke": ## (0g of fat protein and carbs)
-                                    jump diet_coke 
+    label cokeHover:
+        hide normalbuzzsprite
+        show image "coke_action.png" at top
+        """
+        Click on the {b}Diet Coke's{/b} nutritional facts to return to the vending machine. When you return, you can click the button on the top right of the screen to pick a snack for Buzz!
+        """
+        jump vendingHover3
 
-                                "Choose a Snickers bar": ## (35g carbs, 14g fat, 4g protein)
-                                    jump snickers
+    label snickersHover:
+        show image "snickers_action.png" at top
+        """
+        Click on the {b}Snicker's{/b} nutritional facts to return to the vending machine. When you return, you can click the button on the top right of the screen to pick a snack for Buzz!
+        """
+        jump vendingHover3
+
+                            
+    label choices3:
+        with Dissolve(.5)
+        hide image "sprite_action.png"
+        hide image "beef_action.png"
+        hide image "coke_action.png"
+        hide image "snickers_action.png"
+        scene vending
+
+        menu:
+            "Choose Sprite": ## (54g carbs)
+                jump sprite 
+
+            "Choose beef jerky": ## (4g carbs, 1g fat, 11g protein)
+                jump beef_jerky
+
+            "Choose Diet Coke": ## (0g of fat protein and carbs)
+                jump diet_coke 
+
+            "Choose a Snickers bar": ## (35g carbs, 14g fat, 4g protein)
+                jump snickers
                                 
-                            label sprite:
-                                with Dissolve(.5)
-                                pause 0.5
-                                scene classroom
-                                with Dissolve(.5)
-                                """
-                                You come back to class holding a bottle of Sprite, and shake Buzz a little more to wake him up.
-                                """
+    label sprite:
+        with Dissolve(.5)
+        pause 0.5
+        scene classroom
+        with Dissolve(.5)
+        """
+        You come back to class holding a bottle of Sprite, and shake Buzz a little more to wake him up.
+        """
             
-                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple sips for now to get the blood sugar up?"
+        player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple sips for now to get the blood sugar up?"
 
-                                buzz "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
+        buzz "Hrgg? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
                                 
-                                jump middle_ending_screen
+        jump middle_ending_screen
 
-                            label beef_jerky:
-                                with Dissolve(.5)
-                                pause 0.5
-                                scene classroom
-                                with Dissolve(.5)
-                                """
-                                You come back to class holding a bag of beef jerky.
-                                """
+    label beef_jerky:
+        with Dissolve(.5)
+        pause 0.5
+        scene classroom
+        with Dissolve(.5)
+        """
+        You come back to class holding a bag of beef jerky.
+        """
 
-                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple bites for now to get the blood sugar up?"
+        player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple bites for now to get the blood sugar up?"
 
-                                buzz "Hmm? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
+        buzz "Hmm? Oh yeah sure. Thanks for watching out for me, I’ll pay you back. Didn't think to check my sugars after my workout. Sorry"
                                 
-                                buzz "Wait a second, beef jerky? I don’t know how much this will help me. The amount of protein in this will make my blood sugar levels rise more slowly."
+        buzz "Wait a second, beef jerky? I don’t know how much this will help me. The amount of protein in this will make my blood sugar levels rise more slowly."
 
-                                jump found_unconcious_way_later
+        jump found_unconcious_way_later
 
-                            label diet_coke:
-                                with Dissolve(.5)
-                                pause 0.5
-                                scene classroom
-                                with Dissolve(.5)
-                                """ 
-                                You come back to class holding a bottle of Diet Coke.
-                                """
-                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple bites for now to get the blood sugar up?"
+    label diet_coke:
+        with Dissolve(.5)
+        pause 0.5
+        scene classroom
+        with Dissolve(.5)
+        """ 
+        You come back to class holding a bottle of Diet Coke.
+        """
+        player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple bites for now to get the blood sugar up?"
 
-                                Buzz "Um… sure but you know this doesn’t have any sugar in it right…?"
+        Buzz "Um… sure but you know this doesn’t have any sugar in it right…?"
 
-                                jump found_unconcious_way_later
+        jump found_unconcious_way_later
 
-                            label snickers:
-                                with Dissolve(.5)
-                                pause 0.5
-                                scene classroom
-                                with Dissolve(.5)
+    label snickers:
+    with Dissolve(.5)
+    pause 0.5
+    scene classroom
+    with Dissolve(.5)
 
-                                """ 
-                                You come back to class holding a Snickers bar.
-                                """
-                                player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple bites for now to get the blood sugar up?"
+    """ 
+    You come back to class holding a Snickers bar.
+    """
+    player "Hey, just checked your CGM it doesn’t look too good. You mind taking a couple bites for now to get the blood sugar up?"
 
-                                Buzz "Ooo yeah I love Snickers, they have a lot of nuts though which are high in protein."
+    Buzz "Ooo yeah I love Snickers, they have a lot of nuts though which are high in protein."
 
-                                jump found_unconcious_way_later
+    jump found_unconcious_way_later
 
 
-                label found_unconcious_way_later:
-                    """
-                    It’s now the end of class! And you two need to leave soon! So you poke Buzz to see if he wakes up.
-                    """
+    label found_unconcious_way_later:
+    """
+    It’s now the end of class! And you two need to leave soon, but Buzz went back to sleep! You poke Buzz to see if he wakes up.
+    """
 
-                    player "Buzz, we have to go! Wake up!"
+    player "Buzz, we have to go! Wake up!"
 
-                    buzz ". . ."
+    buzz ". . ."
 
-                    player "Buzz? Buzz! Hello?!"
+    player "Buzz? Buzz! Hello?!"
 
-                    buzz ". . . . . . . . . ."
+    buzz ". . . . . . . . . ."
 
-                    """
-                    This doesn’t look good, what do you do??!!
-                    """
+    """
+    This doesn’t look good, what do you do??!!
+    """
 
-                    menu:
-                        "Call 911":
-                            jump er_ending_screen
+    menu:
+        "Call 911":
+            jump er_ending_screen
 
-                        "Try to shake him awake":
-                            jump someone_else_called_911
+        "Try to shake him awake":
+            jump someone_else_called_911
 
-                    return
+    return
                    
     #jump vending_machine_ending_screen
 
