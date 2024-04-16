@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 153: 'hide' is not a keyword argument or valid child of the screen statement.
-    hide normalbuzzsprite
-        ^
+File "game/script.rpy", line 163: 'color' is not a keyword argument or valid child of the textbutton statement.
+    textbutton "Choose a snack for Buzz!" at topright color=(255, 45, 17, 255):
+                                                           ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Sun Apr 14 22:21:58 2024
+Mon Apr 15 23:01:26 2024
