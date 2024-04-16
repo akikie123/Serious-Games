@@ -119,8 +119,6 @@ label start:
     buzz "The equation can seem pretty complicated, but I promise you'll get the hang of it!"
     buzz "(((current blood sugar) - (target blood sugar)) / correction factor) + ((number of grams of carbs) / (insulin:carb ratio))"
 
-    ## implement mini game around here to drag just variables 
-
     buzz "Many of these factors are set numbers that are unique just for me: Target blood sugar = 120 mg/dl, Correction factor = 35, and my Insulin to Carb Ratio = 10 (grams / unit of insulin)"
     ## *given a blank equation fill in these numbers into the correct blanks to get this result:
     #[(current blood sugar) - 120) / 35] + [(# of grams of carbs / 10]
@@ -149,49 +147,50 @@ label start:
         jump vendingHover1
     
     screen hover1():
-        add "vending"
+        add "background2"
         imagebutton:
             xanchor 0.5 
             yanchor 0.5 
-            xpos 0.5
-            ypos 0.28
+            xpos 0.26
+            ypos 0.32
             auto "honeybun_%s.png" action [Jump("honeybun")]
         imagebutton:
             xanchor 0.5 
             yanchor 0.5 
-            xpos 0.25
-            ypos 0.28
+            xpos 0.43
+            ypos 0.50
             auto "protein_%s.png" action [Jump("protein")] ## ToggleScreen("hover1"), 
-        textbutton "Choose a snack for Buzz!":
+        textbutton "Choose a snack for Buzz!" at topright:
             xalign 0.5
             yalign 0.8
             action Jump("choices1")
     
     label vendingHover1:
+        hide image "protein_action.png"
+        hide image "honeybun_action.png"
+        hide normalbuzzsprite
         call screen hover1
     
     label honeybun:
         hide normalbuzzsprite
         show image "honeybun_action.png" at top
         """
-        Click on the {b}Honey Bun's{/b} nutritional facts to return to the vending machine
+        Click on the {b}Honey Bun's{/b} nutritional facts to return to the vending machine. When you return, you can click the button on the top right of the screen to pick a snack for Buzz!
         """
         jump vendingHover1
 
     label protein:
-        hide normalbuzzsprite
         show image "protein_action.png" at top
         """
-        Click on the {b}Protein Bar's{/b} nutritional facts to return to the vending machine
+        Click on the {b}Protein Bar's{/b} nutritional facts to return to the vending machine. When you return, you can click the button on the top right of the screen to pick a snack for Buzz!
         """
         jump vendingHover1
     
     label choices1:
     with Dissolve(.5)
-    pause 0.5
+    hide image "protein_action.png"
+    hide image "honeybun_action.png"
     scene vending
-    pause 1.0
-    hide normalbuzzsprite
 
     menu:
         "Choose the honey bun": # (25 g carbs, 11g fat, 3g protein)
