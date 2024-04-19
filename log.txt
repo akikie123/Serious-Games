@@ -1,11 +1,11 @@
-2024-04-16 16:31:50 UTC
+2024-04-16 19:48:23 UTC
 macOS-14.4.1-arm64-arm-64bit
 Ren'Py 8.2.0.24012702
 
 Early init took 0.04s
-Loading error handling took 0.03s
-Loading script took 0.09s
-Loading save slot metadata took 0.03s
+Loading error handling took 0.04s
+Loading script took 0.08s
+Loading save slot metadata took 0.04s
 Loading persistent took 0.00s
 Running init code took 0.03s
 Loading analysis data took 0.01s
