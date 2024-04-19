@@ -1,3 +1,15 @@
+init python:
+    def drag_placed(drags, drop):
+        if not drop:
+            return
+
+        store.draggable = drags[0].drag_name
+        store.droppable = drop.drag_name
+
+        return True
+    ##def onDrag():
+        ##hide screen blood
+
 label glucagon_scenario:
 
 with Dissolve(.5)
@@ -15,6 +27,7 @@ You two have been practicing together non-stop for the past few weeks in prepara
 {i}*Whistle Noise*{/i}
 """
 player "We're next! Ready Buzz?"
+show tiredbuzzsprite
 # insert drowsy buzz
 buzz "Yea. I don’t know why but I feel a little shakey…"
 
@@ -90,21 +103,37 @@ emergencyOperator "Your coach has informed me that your friend has fainted due t
 """
 Buzz briefly explained how he checks his blood sugar with a glucometer, but that was a while ago.
 """
-
+$ needAssit = False
 # the player has a choice to check Buzz's blood sugar with or without instructions
 menu:
     "I can do it without help!":
-        jump bloodSugarUnassisted
+        jump bloodSugar
 
     "Can you walk me through how?":
-        jump bloodSugarAssisted
+        $ needAssit = True
+        jump bloodSugar
 
-label bloodSugarAssisted:
+label bloodSugar:
     # TODO: implement assisted blood sugar simulation here...
-    jump checkedBloodSugar
-
-label bloodSugarUnassisted:
-    # TODO: implement unassisted blood sugar simulation here...
+    emergencyOperator "To check your friend's blood sugar, you will need a lancing device, a new lancet, a blood glucose test strip, and a blood glucose monitor"
+    if needAssit == True:
+        emergencyOperator "First, twist and take off the cap of the lancing device."
+    show screen blood 
+    if draggable == "cap":
+        if droppable == "base":
+            hide screen blood
+    if needAssit == True:
+        emergencyOperator "Then insert the lancet into the lancing device. After it is secure, take off the lancet cap by twisting it off."
+    if needAssit == True:
+        emergencyOperator "Twist the cap of the lancing device back on. Please be careful to not accidentally prick yourself."
+    if needAssit == True:
+        emergencyOperator "Now we must set up our glucose meter. Simply place the gray end of the test strip into the port of the meter and turn it on."
+    if needAssit == True:
+        emergencyOperator "Hold the lancing device against your friend's finger and press the release button (the small gray button) to prick his finger." 
+        emergencyOperator "If a blood drop hasn't formed, gently massage his finger."
+    if needAssit == True:
+        emergencyOperator "Draw the blood into the tip of the test strip."
+    
     jump checkedBloodSugar
 
 label checkedBloodSugar:
@@ -185,3 +214,27 @@ label buzzWakesUp:
     """
 
 return
+
+screen blood: 
+    image "hand.png" zoom 0.65 xpos -300 
+    image "monitor_off.png" xpos 1100 
+    image "lancet_base.png"  xpos 1000
+    image "lancet_cap.png"  xpos 1000 ypos 50
+    draggroup: 
+        drag:
+            drag_name "base"
+            child "base.png"  
+            xpos 795 
+            ypos 400
+            droppable True
+            draggable False
+        drag:
+            drag_name "cap"
+            xpos 840 
+            ypos 270
+            child "cap.png"
+            drag_raise True
+            draggable True
+            droppable False
+            dragged drag_placed
+    image "test_clean.png" ypos 250 xpos 1100 
