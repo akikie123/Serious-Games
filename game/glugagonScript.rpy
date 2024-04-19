@@ -118,7 +118,7 @@ label bloodSugar:
     emergencyOperator "To check your friend's blood sugar, you will need a lancing device, a new lancet, a blood glucose test strip, and a blood glucose monitor"
     if needAssit == True:
         emergencyOperator "First, twist and take off the cap of the lancing device."
-    show screen blood 
+    call screen blood 
     if draggable == "cap":
         if droppable == "base":
             hide screen blood
