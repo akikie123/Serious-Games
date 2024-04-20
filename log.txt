@@ -1,0 +1,4280 @@
+2024-04-20 01:19:49 UTC
+macOS-10.16-x86_64-i386-64bit
+Ren'Py 8.2.1.24030407
+
+Early init took 0.09s
+Loading error handling took 0.06s
+Loading script took 0.71s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.04s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.04s
+Running _start took 0.00s
+Interface start took 0.47s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 225, in script
+    call screen dragSyringeToVial
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1968, in execute
+    self.call("execute")
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/exports.py", line 3413, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 3201, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/dragdrop.py", line 1092, in event
+    return super(DragGroup, self).event(ev, x, y, st)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 1202, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/dragdrop.py", line 946, in event
+    rv = run(drag.dragged, joined, drop)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/behavior.py", line 395, in run
+    return action(*args, **kwargs)
+  File "game/glugagonScript.rpy", line 6, in drag_placed
+    store.draggable = drops[0].drag_name
+NameError: name 'drops' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 225, in script
+    call screen dragSyringeToVial
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/glugagonScript.rpy", line 6, in drag_placed
+    store.draggable = drops[0].drag_name
+NameError: name 'drops' is not defined
+Resetting cache.
+Early init took 420.25s
+Loading error handling took 0.05s
+Loading script took 0.24s
+Loading save slot metadata took 0.08s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.06s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 442.24s
+Loading error handling took 0.03s
+Loading script took 0.28s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 464.62s
+Loading error handling took 0.03s
+Loading script took 0.22s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.02s
+
+File "game/glugagonScript.rpy", line 231: expected statement.
+    draggedSyrinbe = true;
+                   ^
+DPI scale factor: 1.000000
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 475.34s
+Loading error handling took 0.04s
+Loading script took 0.15s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 231: expected statement.
+    draggedSyringe = true;
+                   ^
+DPI scale factor: 1.000000
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 476.97s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 231: expected statement.
+    draggedSyringe = true;
+                   ^
+DPI scale factor: 1.000000
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 479.72s
+Loading error handling took 0.03s
+Loading script took 0.15s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 231: expected statement.
+    draggedSyringe = true;
+                   ^
+DPI scale factor: 1.000000
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 485.97s
+Loading error handling took 0.03s
+Loading script took 0.14s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 231: expected statement.
+    draggedSyringe = true
+                   ^
+DPI scale factor: 1.000000
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 486.74s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 231: expected statement.
+    draggedSyringe = true
+                   ^
+DPI scale factor: 1.000000
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 514.07s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 231, in script
+    $ draggedSyringe = true
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 231, in <module>
+    $ draggedSyringe = true
+NameError: name 'true' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 231, in script
+    $ draggedSyringe = true
+  File "game/glugagonScript.rpy", line 231, in <module>
+    $ draggedSyringe = true
+NameError: name 'true' is not defined
+Resetting cache.
+Early init took 538.70s
+Loading error handling took 0.03s
+Loading script took 0.19s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.13s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 543.81s
+Loading error handling took 0.04s
+Loading script took 0.21s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 579.48s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.10s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 648.48s
+Loading error handling took 0.04s
+Loading script took 0.28s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.06s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1731.57s
+Loading error handling took 0.04s
+Loading script took 0.24s
+Loading save slot metadata took 0.10s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 204: reached end of line when expecting ':'.
+    if draggable == "filledVial"
+                                ^
+DPI scale factor: 1.000000
+Interface start took 0.25s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1781.48s
+Loading error handling took 0.03s
+Loading script took 0.16s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 204: reached end of line when expecting ':'.
+    if draggable == "filledVial"
+                                ^
+DPI scale factor: 1.000000
+Interface start took 0.21s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1871.53s
+Loading error handling took 0.04s
+Loading script took 0.22s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 204: reached end of line when expecting ':'.
+    if draggable == "filledVial"
+                                ^
+DPI scale factor: 1.000000
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1874.10s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 204: reached end of line when expecting ':'.
+    if draggable == "filledVial"
+                                ^
+DPI scale factor: 1.000000
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 1877.37s
+Loading error handling took 0.03s
+Loading script took 0.17s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 200, in script
+    if needHelp == Trye:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 200, in <module>
+    if needHelp == Trye:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 200, in script
+    if needHelp == Trye:
+  File "game/glugagonScript.rpy", line 200, in <module>
+    if needHelp == Trye:
+NameError: name 'needHelp' is not defined
+Resetting cache.
+Early init took 1890.06s
+Loading error handling took 0.03s
+Loading script took 0.25s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 200, in script
+    if needHelp == True:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 200, in <module>
+    if needHelp == True:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 200, in script
+    if needHelp == True:
+  File "game/glugagonScript.rpy", line 200, in <module>
+    if needHelp == True:
+NameError: name 'needHelp' is not defined
+Resetting cache.
+Early init took 1913.33s
+Loading error handling took 0.03s
+Loading script took 0.26s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 200, in script
+    if needHelp == True:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 200, in <module>
+    if needHelp == True:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 200, in script
+    if needHelp == True:
+  File "game/glugagonScript.rpy", line 200, in <module>
+    if needHelp == True:
+NameError: name 'needHelp' is not defined
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 203, in script
+    call screen shakeVial
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1968, in execute
+    self.call("execute")
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/exports.py", line 3413, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 2818, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 1352, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/dragdrop.py", line 1085, in render
+    return super(DragGroup, self).render(width, height, st, at)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/dragdrop.py", line 619, in render
+    cr = render(child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 626, in render
+    return cache.get(self, render=True)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 309, in get
+    surf = image.load()
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 761, in load
+    raise e
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 711, in load
+    filelike = renpy.loader.load(self.filename, directory="images")
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'bottle_water.png'.
+
+While loading <renpy.display.im.Image object ('bottle_water.png') at 0x10ef4f580>:
+  File "game/glugagonScript.rpy", line 203, in script
+    call screen shakeVial
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+OSError: Couldn't find file 'bottle_water.png'.
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 191, in script
+    if needHelp == True:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 191, in <module>
+    if needHelp == True:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 191, in script
+    if needHelp == True:
+  File "game/glugagonScript.rpy", line 191, in <module>
+    if needHelp == True:
+NameError: name 'needHelp' is not defined
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 180, in script
+    if needHelp == True:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 180, in <module>
+    if needHelp == True:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 180, in script
+    if needHelp == True:
+  File "game/glugagonScript.rpy", line 180, in <module>
+    if needHelp == True:
+NameError: name 'needHelp' is not defined
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 177, in script
+    if needHelp == False:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 177, in <module>
+    if needHelp == False:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 177, in script
+    if needHelp == False:
+  File "game/glugagonScript.rpy", line 177, in <module>
+    if needHelp == False:
+NameError: name 'needHelp' is not defined
+Resetting cache.
+Early init took 2015.39s
+Loading error handling took 0.04s
+Loading script took 0.25s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 202, in script
+    call screen shakeVial
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1968, in execute
+    self.call("execute")
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/exports.py", line 3413, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 2818, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 1352, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/dragdrop.py", line 1085, in render
+    return super(DragGroup, self).render(width, height, st, at)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/dragdrop.py", line 619, in render
+    cr = render(child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 626, in render
+    return cache.get(self, render=True)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 309, in get
+    surf = image.load()
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 761, in load
+    raise e
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 711, in load
+    filelike = renpy.loader.load(self.filename, directory="images")
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'bottle_water.png'.
+
+While loading <renpy.display.im.Image object ('bottle_water.png') at 0x10e8cd0d0>:
+  File "game/glugagonScript.rpy", line 202, in script
+    call screen shakeVial
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+OSError: Couldn't find file 'bottle_water.png'.
+Resetting cache.
+Early init took 2050.73s
+Loading error handling took 0.03s
+Loading script took 0.23s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 2092.21s
+Loading error handling took 0.03s
+Loading script took 0.20s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.08s
+Index archives took 0.00s
+Dump and make backups took 0.12s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.38s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.28s
+Build styles took 0.01s
+Load screen analysis took 0.20s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.19s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Sound init failed. Proceeding anyway.
+Traceback (most recent call last):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/audio/audio.py", line 986, in init
+    renpysound.init(renpy.config.sound_sample_rate, 2, bufsize, False, renpy.config.equal_mono, renpy.config.linear_fades)
+  File "renpysound.pyx", line 407, in renpy.audio.renpysound.init
+  File "renpysound.pyx", line 101, in renpy.audio.renpysound.check_error
+Exception: CoreAudio error (AudioQueueStart): 35
+Interface start took 83.40s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 37881.38s
+Loading error handling took 0.04s
+Loading script took 0.24s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 211: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "emptySyringe"
+    ^
+
+File "game/glugagonScript.rpy", line 218: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "filledSyringe"
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.17s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 37901.18s
+Loading error handling took 0.03s
+Loading script took 0.20s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 211: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "emptySyringe":
+    ^
+
+File "game/glugagonScript.rpy", line 218: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "filledSyringe">
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38097.01s
+Loading error handling took 0.04s
+Loading script took 0.25s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 211: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "emptySyringe":
+    ^
+
+File "game/glugagonScript.rpy", line 218: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "filledSyringe":
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38100.00s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 211: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "emptySyringe":
+    ^
+
+File "game/glugagonScript.rpy", line 218: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "filledSyringe":
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38152.19s
+Loading error handling took 0.02s
+Loading script took 0.14s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 211: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "emptySyringe":
+    ^
+
+File "game/glugagonScript.rpy", line 218: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "filledSyringe":
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38153.65s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 211: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "emptySyringe":
+    ^
+
+File "game/glugagonScript.rpy", line 218: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "filledSyringe":
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38161.45s
+Loading error handling took 0.03s
+Loading script took 0.22s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38425.52s
+Loading error handling took 0.03s
+Loading script took 0.25s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.02s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38493.18s
+Loading error handling took 0.03s
+Loading script took 0.18s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38531.43s
+Loading error handling took 0.02s
+Loading script took 0.16s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.11s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.10s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38571.47s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38737.25s
+Loading error handling took 0.04s
+Loading script took 0.24s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.26s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38757.45s
+Loading error handling took 0.04s
+Loading script took 0.26s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.08s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38803.30s
+Loading error handling took 0.03s
+Loading script took 0.21s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38850.11s
+Loading error handling took 0.03s
+Loading script took 0.27s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 38899.18s
+Loading error handling took 0.03s
+Loading script took 0.26s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 39303.14s
+Loading error handling took 0.12s
+Loading script took 0.26s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 39915.42s
+Loading error handling took 0.03s
+Loading script took 0.33s
+Loading save slot metadata took 0.10s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 39926.44s
+Loading error handling took 0.03s
+Loading script took 0.27s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 213, in script
+    call screen shakeVial
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1968, in execute
+    self.call("execute")
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1950, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/statements.py", line 349, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/exports.py", line 3413, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 2818, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/core.py", line 1352, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/dragdrop.py", line 1085, in render
+    return super(DragGroup, self).render(width, height, st, at)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/dragdrop.py", line 619, in render
+    cr = render(child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 626, in render
+    return cache.get(self, render=True)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 309, in get
+    surf = image.load()
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 761, in load
+    raise e
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/display/im.py", line 711, in load
+    filelike = renpy.loader.load(self.filename, directory="images")
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'invisScreen.jpg'.
+
+While loading <renpy.display.im.Image object ('invisScreen.jpg') at 0x10eae93a0>:
+  File "game/glugagonScript.rpy", line 213, in script
+    call screen shakeVial
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+OSError: Couldn't find file 'invisScreen.jpg'.
+Resetting cache.
+Early init took 39936.03s
+Loading error handling took 0.03s
+Loading script took 0.22s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 39979.21s
+Loading error handling took 0.03s
+Loading script took 0.27s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40097.89s
+Loading error handling took 0.03s
+Loading script took 0.34s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40105.98s
+Loading error handling took 0.03s
+Loading script took 0.21s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40114.20s
+Loading error handling took 0.04s
+Loading script took 0.21s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.08s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40134.42s
+Loading error handling took 0.03s
+Loading script took 0.23s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40139.56s
+Loading error handling took 0.03s
+Loading script took 0.18s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40161.27s
+Loading error handling took 0.03s
+Loading script took 0.17s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.10s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40166.32s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.10s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40191.01s
+Loading error handling took 0.02s
+Loading script took 0.18s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40209.77s
+Loading error handling took 0.03s
+Loading script took 0.17s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40224.59s
+Loading error handling took 0.03s
+Loading script took 0.17s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40275.09s
+Loading error handling took 0.03s
+Loading script took 0.24s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.09s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 40505.90s
+Loading error handling took 0.04s
+Loading script took 0.30s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41038.24s
+Loading error handling took 0.04s
+Loading script took 0.29s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.09s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41078.36s
+Loading error handling took 0.03s
+Loading script took 0.21s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Dump and make backups took 0.14s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41097.29s
+Loading error handling took 0.03s
+Loading script took 0.27s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.05s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.20s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41103.92s
+Loading error handling took 0.03s
+Loading script took 0.25s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41112.06s
+Loading error handling took 0.03s
+Loading script took 0.32s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.07s
+Save screen analysis took 0.04s
+Prepare screens took 0.16s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.19s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41127.62s
+Loading error handling took 0.03s
+Loading script took 0.25s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.06s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41140.44s
+Loading error handling took 0.03s
+Loading script took 0.26s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41340.68s
+Loading error handling took 0.04s
+Loading script took 0.29s
+Loading save slot metadata took 0.14s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.05s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41348.89s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41353.97s
+Loading error handling took 0.03s
+Loading script took 0.20s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41359.43s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.03s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41414.34s
+Loading error handling took 0.04s
+Loading script took 0.20s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41423.98s
+Loading error handling took 0.03s
+Loading script took 0.19s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41430.63s
+Loading error handling took 0.03s
+Loading script took 0.18s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41443.59s
+Loading error handling took 0.03s
+Loading script took 0.18s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41476.04s
+Loading error handling took 0.04s
+Loading script took 0.25s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41489.80s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.20s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 41594.81s
+Loading error handling took 0.04s
+Loading script took 0.33s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.06s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 187, in script
+    if needHelp == False:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 187, in <module>
+    if needHelp == False:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 187, in script
+    if needHelp == False:
+  File "game/glugagonScript.rpy", line 187, in <module>
+    if needHelp == False:
+NameError: name 'needHelp' is not defined
+Resetting cache.
+Early init took 41713.00s
+Loading error handling took 0.03s
+Loading script took 0.32s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.06s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 188, in script
+    if needHelp == False:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 188, in <module>
+    if needHelp == False:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 188, in script
+    if needHelp == False:
+  File "game/glugagonScript.rpy", line 188, in <module>
+    if needHelp == False:
+NameError: name 'needHelp' is not defined
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 188, in script
+    if needHelp == False:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 188, in <module>
+    if needHelp == False:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 188, in script
+    if needHelp == False:
+  File "game/glugagonScript.rpy", line 188, in <module>
+    if needHelp == False:
+NameError: name 'needHelp' is not defined
+Resetting cache.
+Early init took 41769.43s
+Loading error handling took 0.03s
+Loading script took 0.32s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 188, in script
+    if needHelp == False:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 188, in <module>
+    if needHelp == False:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 188, in script
+    if needHelp == False:
+  File "game/glugagonScript.rpy", line 188, in <module>
+    if needHelp == False:
+NameError: name 'needHelp' is not defined
+Resetting cache.
+Early init took 42240.19s
+Loading error handling took 0.03s
+Loading script took 0.31s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.08s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 193, in script
+    python:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 194, in <module>
+    renpy.execute_default_statement(True)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/exports.py", line 4090, in execute_default_statement
+    i.execute_default(start)
+  File "game/glugagonScript.rpy", line 228, in execute_default
+    default btn_selected = False
+Exception: store.btn_selected is being given a default a second time.
+
+While running game code:
+  File "renpy/common/00start.rpy", line 193, in script
+    python:
+  File "renpy/common/00start.rpy", line 194, in <module>
+    renpy.execute_default_statement(True)
+  File "game/glugagonScript.rpy", line 228, in execute_default
+    default btn_selected = False
+Exception: store.btn_selected is being given a default a second time.
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42258.61s
+Loading error handling took 0.03s
+Loading script took 0.29s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42280.48s
+Loading error handling took 0.03s
+Loading script took 0.23s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42297.77s
+Loading error handling took 0.03s
+Loading script took 0.24s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.13s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42313.71s
+Loading error handling took 0.03s
+Loading script took 0.28s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.05s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42399.37s
+Loading error handling took 0.03s
+Loading script took 0.27s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42501.08s
+Loading error handling took 0.04s
+Loading script took 0.27s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42506.32s
+Loading error handling took 0.03s
+Loading script took 0.14s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.06s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.21s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42615.97s
+Loading error handling took 0.04s
+Loading script took 0.26s
+Loading save slot metadata took 0.06s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 238: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    text "Drag the syringe to the vial to push the pre-filled syringe liquid into the glucagon vial."
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42690.00s
+Loading error handling took 0.03s
+Loading script took 0.21s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+
+File "game/glugagonScript.rpy", line 309: Line is indented, but the preceding text statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    draggroup:
+    ^
+DPI scale factor: 1.000000
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42709.77s
+Loading error handling took 0.03s
+Loading script took 0.22s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.08s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42731.57s
+Loading error handling took 0.03s
+Loading script took 0.26s
+Loading save slot metadata took 0.05s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/glugagonScript.rpy", line 188, in script
+    if needHelp == True:
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/ast.py", line 1842, in execute
+    if renpy.python.py_eval(condition):
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Users/maheenkhan/Desktop/CSFiles/VIP/renpy-8.2.1-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/glugagonScript.rpy", line 188, in <module>
+    if needHelp == True:
+NameError: name 'needHelp' is not defined
+
+While running game code:
+  File "game/glugagonScript.rpy", line 188, in script
+    if needHelp == True:
+  File "game/glugagonScript.rpy", line 188, in <module>
+    if needHelp == True:
+NameError: name 'needHelp' is not defined
+Resetting cache.
+Early init took 42750.41s
+Loading error handling took 0.03s
+Loading script took 0.18s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.06s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42788.70s
+Loading error handling took 0.03s
+Loading script took 0.21s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42812.01s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.06s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42824.55s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42850.75s
+Loading error handling took 0.03s
+Loading script took 0.18s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.01s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42865.18s
+Loading error handling took 0.02s
+Loading script took 0.19s
+Loading save slot metadata took 0.04s
+Loading persistent took 0.00s
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.03s
+Index archives took 0.00s
+Backing up script files to '/Users/maheenkhan/Library/RenPy/backups/Serious-Games':
+Dump and make backups took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.09s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 42941.80s
+Loading error handling took 0.03s
+Loading script took 0.21s
+Loading save slot metadata took 0.07s
+Loading persistent took 0.00s
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Dump and make backups took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.07s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.05s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.14s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Fullscreen mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 655'
+Version: b'2.1 INTEL-22.1.28'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1440, 900) drawable=(2880, 1800)
+Maximum texture size: 4096x4096
