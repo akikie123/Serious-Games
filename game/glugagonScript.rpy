@@ -3,10 +3,11 @@ init python:
         if not drop:
             return
 
-        store.draggable = drops[0].drag_name
+        store.draggable = drags[0].drag_name
         store.droppable = drop.drag_name
 
         return True
+    
 
 label glucagon_scenario:
 
@@ -127,14 +128,6 @@ menu:
     "Can you walk me through how?":
         jump bloodSugarAssisted
 
-# define a screen to handle the drag-and-drop interaction
-python:
-    def drag_placed(drags, drop):
-        if not drop:
-            return
-        store.draggable = drags[0].drag_name
-        store.droppable = drop.drag_name
-        return True
 
 label bloodSugarAssisted:
     with Dissolve(.5)
@@ -173,81 +166,69 @@ label checkedBloodSugar:
     emergencyOperator "Okay, would you be able to administer the glucagon to Buzz?"
 
     menu:
-        "I can do it!":
+        "I can do it without help!":
+            jump glucagonSim
+        "Yes, can you walk me through it?":
+            $ needHelp = True
             jump glucagonSim
 
 label glucagonSim:
-    with Dissolve(.5)
-    pause 0.5
-    scene byVolleyballCourt
-    with Dissolve(.5)
-
-    hide phone_talking
-
-    show buzz_outerthigh at left:
-        zoom 0.3
-
-    # HANDLE UNCAPPING SYRINGE...
-    default btn_selected = False
-    screen uncapSyringe:
-        imagebutton:
-            idle "syringe2_capped.png"
-            hover "syringe2_capped.png"
-            selected_idle "syringe3.png"
-            selected_hover "syringe3.png"
-            focus_mask True
-            action ToggleVariable("btn_selected", True)  # Toggle only if btn_selected is False
-            selected (btn_selected)
-
-    show screen uncapSyringe
-
-    while btn_selected == False:
-        "Click the syringe to uncap it."
-
-    # HANDLE DRAGGING SYRINGE ON TOP OF VIAL...
-    # create draggroups with a draggable uncapped syringe and the glucagon vial
-
-    hide screen uncapSyringe
-    default draggedSyringe = False
-    screen dragSyringeToVial:
-        fixed:
-            draggroup:
-                drag:
-                    drag_name "uncappedVial"
-                    xpos 100
-                    ypos 100
-                    child "bottle_front.png"
-                    draggable True
-                    droppable True
-                drag:
-                    drag_name "waterSyringe"
-                    xpos 100
-                    ypos 100
-                    child "syringe3.png"
-                    draggable True
-                    droppable True
-    
-    show screen dragSyringeToVial
-    while draggedSyringe == False:
-        "Drag the syringe to the vial to push the pre-filled syringe liquid into the glucagon vial."
-
-    pause 10000
-
-    # syringe3.png is uncapped syringe
-    # syringe2_capped.png is capped syringe pre-filled with water
 
     # STEPS:
-    # click the syringe to uncap it (go from syringe2_capped to syringe3)
     # drag the syringe on top of the vial to fill the vial with the water (go from bottle_front to bottle_water)
     # turn syringe into syringe2 (empty syringe now)
     # shake powder until it is mixed -> change image to bottle_mixed.png
     # drag syringe on top of vial to turn into syringe3 again
     # drag syringe onto buzz thigh to administer glucagon and exit the activity
+    # syringe3.png is uncapped syringe
+    # syringe2_capped.png is capped syringe pre-filled with glucagon solution
 
+    emergencyOperator "Buzz should have a glucagon kit handy nearby. It should have a glucagon vial and a pre-filled syringe."
+    # if needHelp == False:
+    #     hide phone_talking
 
+    # if needHelp == True:
+    #     emergencyOperator "First, you'll need to uncap the pre-filled glucagon syringe."
 
+    # HANDLE UNCAPPING SYRINGE...
+    default btn_selected = False
+    show screen uncapSyringe
+    while btn_selected == False:
+        "Click the syringe to uncap it."
+    hide screen uncapSyringe
 
-    pause 1000
+    # HANDLE DRAGGING SYRINGE ON TOP OF VIAL...
+    # if needHelp == True:
+    #     emergencyOperator "Drag the syringe to the vial to push the pre-filled syringe liquid into the glucagon vial."
+
+    call screen dragSyringeToVial
+    if draggable == "waterSyringe":
+        if droppable == "uncappedVial":
+            hide screen dragSyringeToVial
+
+    # HANDLE SHAKING VIAL TILL MIXED
+    # if needHelp == True:
+    #     emergencyOperator "Now that you've injected the contents of the syringe into the vial, shake the vial to mix the liquid and powder."
+
+    call screen shakeVial
+    if draggable == "filledVial": # TODO: fix image here
+        if droppable == "invisScreen":
+            hide screen shakeVial
+
+    # HANDLE DRAGGING SYRINGE ON TOP OF VIAL TO FILL IT AGAIN
+
+    call screen dragSyringeToVial2
+    if draggable == "emptySyringe":
+        if droppable == "fullVial":
+            hide screen dragSyringeToVial2
+
+    # HANDLE DRAGGING SYRINGE ON BUZZ'S THIGH
+
+    call screen injectBuzz
+    if draggable == "filledSyringe":
+        if droppable == "buzzThigh":
+            hide screen injectBuzz
+
     jump buzzWakesUp
 
 label buzzWakesUp:
@@ -256,11 +237,11 @@ label buzzWakesUp:
     scene byVolleyballCourt
     with Dissolve(.5)
 
+    show nauseousbuzzsprite:
+        zoom 0.40
     """
     Buzz seems to be regaining his consciousness!
     """
-    show nauseousbuzzsprite:
-        zoom 0.40
     buzz "Wha- Why am I on the ground?"
     player "Well uh… you might have fainted because your blood sugar was too low."
     player "Are you feeling alright?"
@@ -290,3 +271,95 @@ label buzzWakesUp:
     """
 
 return
+
+screen dragSyringeToVial:
+        draggroup:
+            drag:
+                drag_name "uncappedVial"
+                child "bottle_front.png"
+                xpos 100
+                ypos 100
+                draggable True
+                droppable True
+            drag:
+                drag_name "waterSyringe"
+                xpos 100
+                ypos 100
+                child "syringe3.png"
+                drag_raise True
+                draggable True
+                droppable False 
+                dragged drag_placed
+
+screen uncapSyringe: # manually resize image
+        imagebutton:
+            idle "syringe2_capped.png"
+            hover "syringe2_capped.png"
+            selected_idle "syringe3.png"
+            selected_hover "syringe3.png"
+            focus_mask True
+            action ToggleVariable("btn_selected", True)  # Toggle only if btn_selected is False
+            selected (btn_selected)
+
+screen shakeVial:
+    draggroup:
+        drag:
+            drag_name "filledVial"
+            child "bottle_front.png"
+            xpos 100
+            ypos 100
+            draggable True
+            droppable False
+            dragged drag_placed
+        drag:
+            drag_name "emptiedSyringe"
+            xpos 100
+            ypos 100 
+            child "syringe2.png"
+            draggable False
+            droppable False
+        drag:
+            drag_name "invisScreen"
+            child "invisScreen.png"
+            xpos 400
+            ypos 500
+            draggable False
+            droppable True
+
+screen dragSyringeToVial2:
+        draggroup:
+            drag:
+                drag_name "fullVial"
+                child "bottle_mixed.png"
+                xpos 100
+                ypos 100
+                draggable True
+                droppable True
+            drag:
+                drag_name "emptySyringe"
+                xpos 100
+                ypos 100
+                child "syringe2.png"
+                drag_raise True
+                draggable True
+                droppable False
+                dragged drag_placed
+
+screen injectBuzz:
+        draggroup:
+            drag:
+                drag_name "buzzThigh"
+                child "buzz_outerthigh.png"
+                xpos 100 
+                ypos 100
+                draggable True
+                droppable True
+            drag:
+                drag_name "filledSyringe"
+                xpos 100
+                ypos 100
+                child "syringe3.png"
+                drag_raise True
+                draggable True
+                droppable False
+                dragged drag_placed

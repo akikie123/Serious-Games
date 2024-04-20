@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/glugagonScript.rpy", line 222: expected a keyword argument or end of line.
-    at 0.3 0.3
-           ^
+File "game/glugagonScript.rpy", line 211: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "emptySyringe":
+    ^
+
+File "game/glugagonScript.rpy", line 218: Line is indented, but the preceding call screen statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    if draggable == "filledSyringe":
+    ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Tue Apr 16 17:26:49 2024
+Sat Apr 20 07:55:42 2024
