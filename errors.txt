@@ -1,0 +1,22 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/glugagonScript.rpy", line 168: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    zoom 0.4
+    ^
+
+File "game/glugagonScript.rpy", line 180: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    zoom 0.4
+    ^
+
+File "game/glugagonScript.rpy", line 189: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    zoom 0.4
+    ^
+
+File "game/glugagonScript.rpy", line 198: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    zoom 0.4
+    ^
+
+Ren'Py Version: Ren'Py 8.2.1.24030407
+Mon Apr 22 08:34:38 2024
