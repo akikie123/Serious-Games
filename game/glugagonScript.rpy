@@ -64,7 +64,7 @@ label askingShakey:
 
 
 label notWorried:
-    scene # TODO: scene here
+    scene volleyball
     show tiredbuzzsprite:
         zoom 0.40
     buzz "It should be okay. Let’s go play!"
@@ -158,12 +158,16 @@ label bloodSugar:
     emergencyOperator "To check your friend's blood sugar, you will need a lancing device, a new lancet (needle), a blood glucose test strip, and a blood glucose monitor"
     if needAssit == True:
         emergencyOperator "First, take off the cap of the lancing device."
+    hide phone_talking
     call screen blood 
     if draggable == "cap" and droppable == "transparent":
         hide screen blood
         
     if needAssit == True:
+        show phone_talking:
+            zoom 0.4
         emergencyOperator "Then insert the lancet into the lancing device. After it is secure, take off the lancet cap by twisting it off."
+        hide phone_talking
     call screen blood1
     if draggable == "lancet" and droppable == "base":
         hide screen blood1
@@ -172,20 +176,29 @@ label bloodSugar:
         hide screen blood2
 
     if needAssit == True:
+        show phone_talking:
+            zoom 0.4
         emergencyOperator "Replace the cap of the lancing device. Please be careful to not accidentally prick yourself."
+        hide phone_talking
     call screen blood3
     if draggable == "cap" and droppable == "base_lancet":
         hide screen blood3
     
     if needAssit == True:
+        show phone_talking:
+            zoom 0.4
         emergencyOperator "Now we must set up our glucose meter. Simply place the gray end of the test strip into the port of the meter and turn it on."
+        hide phone_talking
     call screen blood4
     if draggable == "test_clean" and droppable == "monitor_off":
         hide screen blood4
     
     if needAssit == True:
+        show phone_talking:
+            zoom 0.4
         emergencyOperator "Hold the lancing device against your friend's finger and press the release button (the small gray button) to prick his finger." 
         emergencyOperator "Then draw the blood drop into the tip of the test strip"
+        hide phone_talking
     call screen blood5
     if draggable == "lancing_device" and droppable == "hand":
         hide screen blood5
@@ -216,11 +229,11 @@ label checkedBloodSugar:
     with Dissolve(.5)
 
 
-    show phone_talking:
-        zoom 0.40
 
     player "It reads 35 mg/dL."
     hide monitor_test_done
+    show phone_talking:
+        zoom 0.40
     emergencyOperator "Your friend's blood sugar is way too low.  If we don't administer glucagon right now, there is a risk of permanent damage!"
     emergencyOperator "Does your friend carry a glucagon kit with them?"
     """
@@ -288,6 +301,7 @@ label glucagonSim:
     if draggable == "filledSyringe":
         if droppable == "buzzThigh":
             hide screen injectBuzz
+    jump buzzWakesUp
 
 
 label glucagonSimAssisted:
