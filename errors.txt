@@ -2,11 +2,17 @@
 errors listed below, and try again.
 
 
-The label outside_class is defined twice, at File "game/script.rpy", line 102:
-    label outside_class:
-and File "game/script.rpy", line 203:
-    label outside_class:
+File "game/script.rpy", line 741: menu statement expects a non-empty block.
+    menu:
+        ^
 
+File "game/script.rpy", line 742: expected statement.
+    "Call 911":
+              ^
+
+File "game/script.rpy", line 745: expected statement.
+    "Try to shake him awake":
+                            ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Fri Apr  5 12:24:31 2024
+Tue Apr 16 12:15:47 2024
