@@ -1,1 +1,6 @@
 .DS_Store
+errors.txt
+log.txt
+traceback.txt
+game/cache/.
+game/saves/.
