@@ -1,3 +1,6 @@
+image volleyball = "images/volleyball_court.jpg"
+image sand = "images/sand.jpg"
+
 init python:
     def drag_placed(drags, drop):
         if not drop:
@@ -13,7 +16,7 @@ label glucagon_scenario:
 
 with Dissolve(.5)
 pause 0.5
-scene # next to nav sand courts
+scene volleyball
 with Dissolve(.5)
 
 """
@@ -52,7 +55,7 @@ label askingShakey:
 
 with Dissolve(.5)
 pause 0.5
-scene # on nav sand courts
+scene volleyball
 with Dissolve(.5)
 
 # background volleyball game noize
@@ -85,6 +88,7 @@ label stopFaint:
     """
     {i}You offer an arm as support for Buzz and slowly walk over to a nearby bench.{/i}
     """
+    scene sand
     """
     {i}Before you two could make it, you feel Buzz slump over. Oh no, Buzz has fainted! You immediately check if he is breathing. {/i}
     """
@@ -161,7 +165,7 @@ label bloodSugar:
 label checkedBloodSugar:
     with Dissolve(.5)
     pause 0.5
-    scene # TODO: choose scene
+    scene sand
     with Dissolve(.5)
 
     show monitor_test_done:
@@ -187,7 +191,7 @@ label checkedBloodSugar:
 label glucagonUnassisted:
     with Dissolve(.5)
     pause 0.5
-    scene # TODO: choose scene
+    scene sand
     with Dissolve(.5)
 
     # TODO: implement unassisted glucagon simulation here...
@@ -196,7 +200,7 @@ label glucagonUnassisted:
 label glucagonAssisted:
     with Dissolve(.5)
     pause 0.5
-    scene # TODO: choose scene
+    scene sand
     with Dissolve(.5)
 
     # TODO: implement assisted glucagon simulation here...
@@ -205,7 +209,7 @@ label glucagonAssisted:
 label buzzWakesUp:
     with Dissolve(.5)
     pause 0.5
-    scene # TODO: choose scene
+    scene volleyball
     with Dissolve(.5)
 
     """
